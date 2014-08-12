@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C8023AA8-CF84-4D4F-B300-26B1DDC97A24}</ProjectGuid>
+    <RootNamespace>PseudoWire</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\Nathan\Documents\Programming\Libraries\SFML2\include;D:\Documents\Programming\Library\sfml2\include;..\PseudoWire;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;PSAPI_VERSION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Nathan\Documents\Programming\Libraries\SFML2\lib\vc2010;D:\Documents\Programming\Library\sfml2\lib\vc2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml2-main-d.lib;sfml2-system-s-d.lib;sfml2-audio-s-d.lib;sfml2-graphics-s-d.lib;sfml2-window-s-d.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>C:\Users\Nathan\Documents\Programming\Libraries\SFML2\include;D:\Documents\Programming\Library\sfml2\include;..\PseudoWire;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Nathan\Documents\Programming\Libraries\SFML2\lib\vc2010;D:\Documents\Programming\Library\sfml2\lib\vc2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml2-main.lib;sfml2-system-s.lib;sfml2-audio-s.lib;sfml2-graphics-s.lib;sfml2-window-s.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <RegisterOutput>false</RegisterOutput>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="game\Fonts.cpp" />
+    <ClCompile Include="game\GameLoader.cpp" />
+    <ClCompile Include="game\LuaAPI.cpp" />
+    <ClCompile Include="game\LuaComponent.cpp" />
+    <ClCompile Include="game\GameState.cpp" />
+    <ClCompile Include="game\lua\lapi.c" />
+    <ClCompile Include="game\lua\lauxlib.c" />
+    <ClCompile Include="game\lua\lbaselib.c" />
+    <ClCompile Include="game\lua\lcode.c" />
+    <ClCompile Include="game\lua\ldblib.c" />
+    <ClCompile Include="game\lua\ldebug.c" />
+    <ClCompile Include="game\lua\ldo.c" />
+    <ClCompile Include="game\lua\ldump.c" />
+    <ClCompile Include="game\lua\lfunc.c" />
+    <ClCompile Include="game\lua\lgc.c" />
+    <ClCompile Include="game\lua\linit.c" />
+    <ClCompile Include="game\lua\liolib.c" />
+    <ClCompile Include="game\lua\llex.c" />
+    <ClCompile Include="game\lua\lmathlib.c" />
+    <ClCompile Include="game\lua\lmem.c" />
+    <ClCompile Include="game\lua\loadlib.c" />
+    <ClCompile Include="game\lua\lobject.c" />
+    <ClCompile Include="game\lua\lopcodes.c" />
+    <ClCompile Include="game\lua\loslib.c" />
+    <ClCompile Include="game\lua\lparser.c" />
+    <ClCompile Include="game\lua\lstate.c" />
+    <ClCompile Include="game\lua\lstring.c" />
+    <ClCompile Include="game\lua\lstrlib.c" />
+    <ClCompile Include="game\lua\ltable.c" />
+    <ClCompile Include="game\lua\ltablib.c" />
+    <ClCompile Include="game\lua\ltm.c" />
+    <ClCompile Include="game\lua\lundump.c" />
+    <ClCompile Include="game\lua\lvm.c" />
+    <ClCompile Include="game\lua\lzio.c" />
+    <ClCompile Include="game\lua\print.c" />
+    <ClCompile Include="game\tinyxml\tinystr.cpp" />
+    <ClCompile Include="game\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="game\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="game\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="game\UI\UIButton.cpp" />
+    <ClCompile Include="game\UI\UICompContext.cpp" />
+    <ClCompile Include="game\UI\UIConsole.cpp" />
+    <ClCompile Include="game\UI\UIEdit.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Check.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Explorer.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Key.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Label.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Number.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Radio.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Separator.cpp" />
+    <ClCompile Include="game\UI\UIEdit_String.cpp" />
+    <ClCompile Include="game\UI\UIEdit_StringML.cpp" />
+    <ClCompile Include="game\UI\UIMenu.cpp" />
+    <ClCompile Include="game\UI\UIScrollBar.cpp" />
+    <ClCompile Include="game\UI\UITree.cpp" />
+    <ClCompile Include="game\UI\UIWindow.cpp" />
+    <ClCompile Include="game\UI\UIEdit_Sprite.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="sys\Color.cpp" />
+    <ClCompile Include="sys\Component.cpp" />
+    <ClCompile Include="sys\Engine.cpp" />
+    <ClCompile Include="sys\events\EventMsg.cpp" />
+    <ClCompile Include="sys\gfx\window\WindowWin32.cpp" />
+    <ClCompile Include="sys\Gradient.cpp" />
+    <ClCompile Include="sys\HiresTimer.cpp" />
+    <ClCompile Include="sys\io\Path.cpp" />
+    <ClCompile Include="sys\Math.cpp" />
+    <ClCompile Include="sys\physics\Fixture.cpp" />
+    <ClCompile Include="sys\State.cpp" />
+    <ClCompile Include="sys\Stopwatch.cpp" />
+    <ClCompile Include="sys\XComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game\Fonts.h" />
+    <ClInclude Include="game\GameData.h" />
+    <ClInclude Include="game\GameLoader.h" />
+    <ClInclude Include="game\LuaAPI.h" />
+    <ClInclude Include="game\LuaComponent.h" />
+    <ClInclude Include="game\GameState.h" />
+    <ClInclude Include="game\lua\lapi.h" />
+    <ClInclude Include="game\lua\lauxlib.h" />
+    <ClInclude Include="game\lua\lcode.h" />
+    <ClInclude Include="game\lua\ldebug.h" />
+    <ClInclude Include="game\lua\ldo.h" />
+    <ClInclude Include="game\lua\lfunc.h" />
+    <ClInclude Include="game\lua\lgc.h" />
+    <ClInclude Include="game\lua\llex.h" />
+    <ClInclude Include="game\lua\llimits.h" />
+    <ClInclude Include="game\lua\lmem.h" />
+    <ClInclude Include="game\lua\lobject.h" />
+    <ClInclude Include="game\lua\lopcodes.h" />
+    <ClInclude Include="game\lua\lparser.h" />
+    <ClInclude Include="game\lua\lstate.h" />
+    <ClInclude Include="game\lua\lstring.h" />
+    <ClInclude Include="game\lua\ltable.h" />
+    <ClInclude Include="game\lua\ltm.h" />
+    <ClInclude Include="game\lua\lua.h" />
+    <ClInclude Include="game\lua\lua.hpp" />
+    <ClInclude Include="game\lua\luaconf.h" />
+    <ClInclude Include="game\lua\lualib.h" />
+    <ClInclude Include="game\lua\lundump.h" />
+    <ClInclude Include="game\lua\lvm.h" />
+    <ClInclude Include="game\lua\lzio.h" />
+    <ClInclude Include="game\luna.h" />
+    <ClInclude Include="game\Port.h" />
+    <ClInclude Include="game\Renderer.h" />
+    <ClInclude Include="game\tinyxml\tinystr.h" />
+    <ClInclude Include="game\tinyxml\tinyxml.h" />
+    <ClInclude Include="game\UI\UIButton.h" />
+    <ClInclude Include="game\UI\UICompContext.h" />
+    <ClInclude Include="game\UI\UIConsole.h" />
+    <ClInclude Include="game\UI\UIEdit.h" />
+    <ClInclude Include="game\UI\UIEdit_Check.h" />
+    <ClInclude Include="game\UI\UIEdit_Explorer.h" />
+    <ClInclude Include="game\UI\UIEdit_Key.h" />
+    <ClInclude Include="game\UI\UIEdit_Label.h" />
+    <ClInclude Include="game\UI\UIEdit_Number.h" />
+    <ClInclude Include="game\UI\UIEdit_Radio.h" />
+    <ClInclude Include="game\UI\UIEdit_Separator.h" />
+    <ClInclude Include="game\UI\UIEdit_String.h" />
+    <ClInclude Include="game\UI\UIEdit_StringML.h" />
+    <ClInclude Include="game\UI\UIMenu.h" />
+    <ClInclude Include="game\UI\UIScrollBar.h" />
+    <ClInclude Include="game\UI\UITree.h" />
+    <ClInclude Include="game\UI\UIWindow.h" />
+    <ClInclude Include="game\UI\UIEdit_Sprite.h" />
+    <ClInclude Include="game\UI\UI_DATA.h" />
+    <ClInclude Include="sys\Color.h" />
+    <ClInclude Include="sys\Component.h" />
+    <ClInclude Include="sys\Dbg.h" />
+    <ClInclude Include="sys\DispatchTimer.h" />
+    <ClInclude Include="sys\Engine.h" />
+    <ClInclude Include="sys\events\EventMsg.h" />
+    <ClInclude Include="sys\events\events.h" />
+    <ClInclude Include="sys\externs\decmpa\include\decmpa.h" />
+    <ClInclude Include="sys\externs\dirent.h" />
+    <ClInclude Include="sys\externs\FastDelegate.h" />
+    <ClInclude Include="sys\externs\glew17\includes\glew.h" />
+    <ClInclude Include="sys\externs\glew17\includes\glxew.h" />
+    <ClInclude Include="sys\externs\glew17\includes\wglew.h" />
+    <ClInclude Include="sys\externs\sndfile\include\sndfile.h" />
+    <ClInclude Include="sys\gfx\Events.h" />
+    <ClInclude Include="sys\gfx\gfx.h" />
+    <ClInclude Include="sys\gfx\Input.h" />
+    <ClInclude Include="sys\gfx\opengl.h" />
+    <ClInclude Include="sys\gfx\VideoSettings.h" />
+    <ClInclude Include="sys\gfx\Window.h" />
+    <ClInclude Include="sys\gfx\window\WindowWin32.h" />
+    <ClInclude Include="sys\Gradient.h" />
+    <ClInclude Include="sys\HiresTimer.h" />
+    <ClInclude Include="sys\io\io.h" />
+    <ClInclude Include="sys\io\Path.h" />
+    <ClInclude Include="sys\List.h" />
+    <ClInclude Include="sys\Logic.h" />
+    <ClInclude Include="sys\Math.h" />
+    <ClInclude Include="sys\Memory.h" />
+    <ClInclude Include="sys\physics\Fixture.h" />
+    <ClInclude Include="sys\physics\physics.h" />
+    <ClInclude Include="sys\Platform.h" />
+    <ClInclude Include="sys\Point.h" />
+    <ClInclude Include="sys\Random.h" />
+    <ClInclude Include="sys\RawArray.h" />
+    <ClInclude Include="sys\Ray.h" />
+    <ClInclude Include="sys\Rect.h" />
+    <ClInclude Include="sys\Ref.h" />
+    <ClInclude Include="sys\Singleton.h" />
+    <ClInclude Include="sys\Stack.h" />
+    <ClInclude Include="sys\State.h" />
+    <ClInclude Include="sys\Stopwatch.h" />
+    <ClInclude Include="sys\String.h" />
+    <ClInclude Include="sys\StringHelper.h" />
+    <ClInclude Include="sys\sys.h" />
+    <ClInclude Include="sys\Vector.h" />
+    <ClInclude Include="sys\XComponent.h" />
+    <ClInclude Include="userdefs.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

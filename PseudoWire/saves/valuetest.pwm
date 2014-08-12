@@ -1,0 +1,10 @@
+<savefile scrx="0" scry="0">
+    <item x="215" y="177" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="1" />
+        <data tkey="str" key="valuenum" tval="num" value="0" />
+        <data tkey="str" key="valuestr" tval="str" value="Test" />
+    </item>
+    <item x="420" y="201" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="0" />
+    </item>
+</savefile>

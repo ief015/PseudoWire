@@ -1,0 +1,20 @@
+CHANGES:
+
+Added true.lua and false.lua under Logic.
+
+
+THINGS TO DO:
+
+- Fix Sleep() slowing down program because of lag compensation
+
+
+NOTES FOR DOCUMENTATION:
+
+Lua String lib additions:
+number string.charat(string str, integer idx) -- get character at index
+string string.remove(string str, integer start, integer end) -- remove a chunk of the string from start to end
+string string.insert(string str, string ins, integer spot) -- insert a string at a specific spot
+
+Saving:
+onGameLoad is called BEFORE wiring, reading input values will be rendered useless
+

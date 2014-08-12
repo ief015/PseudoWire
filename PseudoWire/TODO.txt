@@ -1,0 +1,13 @@
+Pseudo Wire TODO List
+
+-======================================================-
+-======================== TODO ========================-
+
+
+Rare bug with unwiring, unable to rewire sometimes
+	Difficult to reproduce this bug...
+
+Menu selection box shows after closing and opening new context
+
+Finish online web documentation
+	uuuuugh

@@ -1,0 +1,86 @@
+<savefile scrx="-34" scry="44">
+    <item x="147" y="375" pkg="Developer Debug" catg="Debug" itm="Sampler">
+        <in port="0" cport="0" cid="6" />
+        <data tkey="str" key="label" tval="str" value="In" />
+    </item>
+    <item x="219" y="374" pkg="Developer Debug" catg="Debug" itm="Sampler">
+        <in port="0" cport="0" cid="7" />
+        <data tkey="str" key="label" tval="str" value="1" />
+    </item>
+    <item x="291" y="372" pkg="Developer Debug" catg="Debug" itm="Sampler">
+        <in port="0" cport="0" cid="10" />
+        <data tkey="str" key="label" tval="str" value="2" />
+    </item>
+    <item x="371" y="370" pkg="Developer Debug" catg="Debug" itm="Sampler">
+        <in port="0" cport="0" cid="8" />
+        <data tkey="str" key="label" tval="str" value="3" />
+    </item>
+    <item x="451" y="368" pkg="Developer Debug" catg="Debug" itm="Sampler">
+        <in port="0" cport="0" cid="9" />
+        <data tkey="str" key="label" tval="str" value="4" />
+    </item>
+    <item x="535" y="366" pkg="Developer Debug" catg="Debug" itm="Sampler">
+        <in port="0" cport="0" cid="14" />
+        <data tkey="str" key="label" tval="str" value="Out" />
+    </item>
+    <item x="98" y="218" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="In" />
+    </item>
+    <item x="202" y="231" pkg="Standard" catg="Math" itm="Absolute">
+        <in port="0" cport="0" cid="6" />
+    </item>
+    <item x="343" y="282" pkg="Standard" catg="Math" itm="Negate">
+        <in port="0" cport="0" cid="7" />
+    </item>
+    <item x="396" y="278" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="8" />
+        <in port="1" cport="0" cid="10" />
+    </item>
+    <item x="330" y="166" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="6" />
+        <in port="1" cport="0" cid="7" />
+    </item>
+    <item x="637" y="78" pkg="Developer Debug" catg="Debug" itm="Newline">
+        <in port="0" cport="0" cid="12" />
+    </item>
+    <item x="546" y="78" pkg="Standard" catg="IO" itm="Key">
+        <data tkey="str" key="upval" tval="num" value="0" />
+        <data tkey="str" key="downval" tval="num" value="1" />
+        <data tkey="str" key="key" tval="num" value="277" />
+    </item>
+    <item x="591" y="216" pkg="Standard" catg="Display" itm="LED">
+        <in port="0" cport="0" cid="14" />
+    </item>
+    <item x="508" y="218" pkg="Standard" catg="Math" itm="Multiply">
+        <in port="0" cport="0" cid="10" />
+        <in port="1" cport="0" cid="9" />
+    </item>
+    <item x="167" y="425" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="In                    1                       2                       3                          4                       Out" />
+    </item>
+    <item x="117" y="195" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="In" />
+    </item>
+    <item x="208" y="216" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="1" />
+    </item>
+    <item x="352" y="149" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="2" />
+    </item>
+    <item x="354" y="265" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="3" />
+    </item>
+    <item x="417" y="251" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="4" />
+    </item>
+    <item x="531" y="200" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="Out" />
+    </item>
+    <item x="579" y="245" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="14" />
+    </item>
+</savefile>

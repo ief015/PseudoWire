@@ -1,0 +1,161 @@
+<savefile scrx="17" scry="321">
+    <item x="88" y="429" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="327" y="440" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="2" />
+    </item>
+    <item x="269" y="442" pkg="Standard" catg="Storage" itm="D Flip-Flop (Clocked)">
+        <in port="0" cport="0" cid="0" />
+        <in port="1" cport="0" cid="3" />
+    </item>
+    <item x="216" y="462" pkg="Standard" catg="Logic" itm="If">
+        <in port="0" cport="0" cid="0" />
+        <in port="1" cport="0" cid="19" />
+    </item>
+    <item x="355" y="84" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="419" y="59" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="4" />
+    </item>
+    <item x="469" y="127" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="7" />
+    </item>
+    <item x="416" y="117" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="4" />
+    </item>
+    <item x="525" y="131" pkg="Standard" catg="Logic" itm="Or">
+        <in port="0" cport="0" cid="5" />
+        <in port="1" cport="0" cid="6" />
+    </item>
+    <item x="573" y="134" pkg="Standard" catg="Math" itm="Increment">
+        <in port="0" cport="0" cid="8" />
+        <in port="1" cport="0" cid="10" />
+    </item>
+    <item x="534" y="179" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="1" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="633" y="140" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="9" />
+    </item>
+    <item x="323" y="465" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="This should display a random number." />
+    </item>
+    <item x="550" y="97" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="This should only increase&#x0A;by one." />
+    </item>
+    <item x="448" y="366" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="530" y="383" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="14" />
+        <in port="1" cport="0" cid="15">
+            <point x="565" y="74" />
+            <point x="572" y="97" />
+            <point x="555" y="118" />
+            <point x="505" y="116" />
+            <point x="490" y="104" />
+        </in>
+    </item>
+    <item x="591" y="383" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="15" />
+    </item>
+    <item x="504" y="336" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="This should not hang the game.&#x0A;(This is fixed, but it should not occur&#x0A;while fixing the other issues...)" />
+    </item>
+    <item x="600" y="405" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="(Looping increase is ok,&#x0A;would be awesome if fixed)" />
+    </item>
+    <item x="144" y="466" pkg="Standard" catg="Math" itm="Random">
+        <in port="0" cport="0" cid="0" />
+        <data tkey="str" key="randtype" tval="num" value="1" />
+        <data tkey="str" key="nseed" tval="num" value="0" />
+        <data tkey="str" key="bseed" tval="bool" value="0" />
+    </item>
+    <item x="4" y="207" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="142" y="143" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="20" />
+    </item>
+    <item x="271" y="144" pkg="Standard" catg="Display" itm="LED">
+        <in port="0" cport="0" cid="21" />
+    </item>
+    <item x="275" y="184" pkg="Standard" catg="Display" itm="LED">
+        <in port="0" cport="0" cid="38">
+            <point x="413" y="17" />
+            <point x="414" y="-80" />
+            <point x="287" y="-106" />
+        </in>
+    </item>
+    <item x="79" y="265" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="20" />
+    </item>
+    <item x="148" y="265" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="31" />
+    </item>
+    <item x="218" y="264" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="32" />
+    </item>
+    <item x="337" y="259" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="36" />
+    </item>
+    <item x="280" y="261" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="34" />
+    </item>
+    <item x="144" y="315" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="25" />
+    </item>
+    <item x="77" y="318" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="24" />
+    </item>
+    <item x="76" y="372" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="30" />
+    </item>
+    <item x="146" y="372" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="29" />
+    </item>
+    <item x="213" y="315" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="26" />
+    </item>
+    <item x="211" y="370" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="33" />
+    </item>
+    <item x="276" y="312" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="28" />
+    </item>
+    <item x="277" y="367" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="35" />
+    </item>
+    <item x="338" y="312" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="27" />
+    </item>
+    <item x="336" y="366" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="37" />
+    </item>
+    <item x="107" y="215" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="All of this should happen in one tick.&#x0A;(This is fixed, but it should not occur&#x0A;while fixing the other issues..)" />
+    </item>
+    <item x="579" y="182" pkg="Standard" catg="Display" itm="Label">
+        <data tkey="str" key="text" tval="str" value="The OR gate is calling&#x0A;onInputsTriggered() twice, thus&#x0A;outputting 1 twice (possible in one tick?)" />
+    </item>
+</savefile>

@@ -1,0 +1,43 @@
+<savefile scrx="0" scry="1">
+    <item x="221" y="206" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="324" y="205" pkg="Standard" catg="IO" itm="Buffer">
+        <in port="0" cport="0" cid="0" />
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="b_multistep" tval="bool" value="0" />
+        <data tkey="str" key="n_multistep" tval="num" value="1" />
+    </item>
+    <item x="415" y="212" pkg="Standard" catg="Logic" itm="Or">
+        <in port="0" cport="0" cid="1" />
+        <in port="1" cport="0" cid="6" />
+    </item>
+    <item x="491" y="218" pkg="Standard" catg="Math" itm="Increment">
+        <in port="0" cport="0" cid="2" />
+        <in port="1" cport="0" cid="4" />
+    </item>
+    <item x="426" y="269" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="1" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="602" y="223" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="3" />
+    </item>
+    <item x="355" y="240" pkg="Standard" catg="IO" itm="Buffer">
+        <in port="0" cport="0" cid="7" />
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="b_multistep" tval="bool" value="0" />
+        <data tkey="str" key="n_multistep" tval="num" value="1" />
+    </item>
+    <item x="303" y="241" pkg="Standard" catg="IO" itm="Buffer">
+        <in port="0" cport="0" cid="0" />
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="b_multistep" tval="bool" value="0" />
+        <data tkey="str" key="n_multistep" tval="num" value="1" />
+    </item>
+</savefile>

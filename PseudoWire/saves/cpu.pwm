@@ -1,0 +1,5 @@
+<savefile scrx="0" scry="0">
+    <item x="321" y="174" pkg="Developer Debug" catg="Advanced" itm="CPU">
+        <data tkey="str" key="script" tval="str" value="" />
+    </item>
+</savefile>

@@ -1,0 +1,178 @@
+<!-- Complementary Standard Lua Package (SLP) -->
+<!-- Written by ief015 -->
+
+<package name="Standard" author="ief015" version="1.0.0" >
+
+	<!-- Arithmetic -->
+	<category name="Math" path="math">
+		
+		<item name="Absolute" path="abs.lua"> Get the absolute. </item>
+		<item name="Add" path="add.lua"> Addition. (Out = A + B + C + D) </item>
+		<item name="Ceiling" path="ceil.lua"> Round up (ceiling). </item>
+		<item name="Clamp" path="clamp.lua"> Clamp A between Min and Max. </item>
+		<item name="Divide" path="divide.lua"> Division. (Out = A / B) </item>
+		<item name="E" path="e.lua"> Returns mathematical constant e. (Euler's Number -- Not Euler's Constant) </item>
+		<item name="Floor" path="floor.lua"> Round down (floor). </item>
+		<item name="Increment" path="increment.lua"> Increase value. </item>
+		<item name="Interpolate" path="interpolate.lua"> Gets A%% of Low -&gt; High. [A%% is 0 -> 1] </item>
+		<item name="Log" path="log.lua"> Natural Logarithm. </item>
+		<item name="Log10" path="log10.lua"> Logarithm to base 10. </item>
+		<item name="Max" path="max.lua"> Output maximum of input values. </item>
+		<item name="Min" path="min.lua"> Output minimum of input values. </item>
+		<item name="Modulo" path="mod.lua"> Modulo. Grabs the remainder of the divided value. (Out = A %% B) </item>
+		<item name="Multiply" path="multiply.lua"> Multiplication. (Out = A * B) </item>
+		<item name="Negate" path="negate.lua"> Negate value. </item>
+		<item name="Pi" path="pi.lua"> Returns the mathematical constant Pi. </item>
+		<item name="Power" path="pow.lua"> A to the power of B. (Out = A ^ B) </item>
+		<item name="Random" path="random.lua"> A pseudo-random number generator. Editable. </item>
+		<item name="Round" path="round.lua"> Round value. </item>
+		<item name="Sign" path="sign.lua"> Sign. (1 if &gt; 0, -1 if &lt; 0, 0 if 0) </item>
+		<item name="Square" path="sqr.lua"> Square. (Out = A*A) </item>
+		<item name="Square Root" path="sqrt.lua"> Squareroot. (Out = Sqrt A) </item>
+		<item name="Subtract" path="subtract.lua"> Subtraction. (Out = A - B - C - D) </item>
+		
+	</category>
+	
+	<!-- Comparison -->
+	<category name="Comparison" path="compare">
+		
+		<item name="Equal" path="eq.lua"> Equal To. (A == B) </item>
+		<item name="Greater Than" path="gt.lua"> Greater Than. (A &gt; B) </item>
+		<item name="Greater Than or Equal" path="gte.lua"> Greater Than or Equal To. (A &gt;= B) </item>
+		<item name="Less Than" path="lt.lua"> Less Than. (A &lt; B) </item>
+		<item name="Less Than or Equal" path="lte.lua"> Less Than or Equal To. (A &lt;= B) </item>
+		<item name="Not Equal" path="neq.lua"> Not Equal To. (A != B) </item>
+		
+	</category>
+	
+	<!-- Logical -->
+	<category name="Logic" path="logic">
+		
+		<item name="And" path="and.lua"> Logical AND. (A &amp; B) </item>
+		<item name="False" path="false.lua"> Constant boolean value. (False) </item>
+		<item name="If" path="if.lua"> Conditional. If True (Not 0), output True Value, else output False Value. </item>
+		<item name="Or" path="or.lua"> Logical OR. (A | B) </item>
+		<item name="NAnd" path="nand.lua"> Logical NOT-AND. !(A &amp; B) </item>
+		<item name="NOr" path="nor.lua"> Logical NOT OR. !(A | B) </item>
+		<item name="Not" path="not.lua"> Logical NOT. (!A) </item>
+		<item name="True" path="true.lua"> Constant boolean value. (True) </item>
+		<item name="XNOr" path="xnor.lua"> Logical EXclusive NOT OR. ((A &amp; B) | (!A &amp; !B)) </item>
+		<item name="XOr" path="xor.lua"> Logical EXclusive OR. (!(A &amp; B) &amp; !(!A &amp; !B)) </item>
+		
+	</category>
+	
+	<!-- Timing -->
+	<category name="Time" path="time">
+		
+		<item name="Accumulator" path="accumulator.lua"> Increase value overtime. </item>
+		<item name="Dispatcher" path="dispatch.lua"> An oscillating or pulsing dispatch timer. </item>
+		<item name="Interpolation Timer" path="itrptimer.lua"> Increase value overtime from Min -> Max during time frame (in seconds). </item>
+		<item name="Timer" path="timer.lua"> A stopwatch timer. </item>
+		
+	</category>
+	
+	<!-- Trigonometry -->
+	<category name="Trigonometry" path="trig">
+		
+		<item name="ACos (Rads)" path="arcos.lua"> Arc Cosine. (Radians) </item>
+		<item name="ACos (Deg)" path="adcos.lua"> Arc Cosine. (Degrees) </item>
+		<item name="ASin (Rad)" path="arsin.lua"> Arc Sine. (Radians) </item>
+		<item name="ASin (Deg)" path="adsin.lua"> Arc Sine. (Degrees) </item>
+		<item name="ATan (Rads)" path="artan.lua"> Arc Tangent. (Radians) </item>
+		<item name="ATan (Deg)" path="adtan.lua"> Arc Tangent. (Degrees) </item>
+		<item name="ATan2 (Rads)" path="artan2.lua"> Arc Tangent. [2-Inputs] (Radians) </item>
+		<item name="ATan2 (Deg)" path="adtan2.lua"> Arc Tangent. [2-Inputs] (Degrees) </item>
+		
+		<item name="Cos (Rads)" path="rcos.lua"> Cosine. (Radians) </item>
+		<item name="Cos (Deg)" path="dcos.lua"> Cosine. (Degrees) </item>
+		<item name="Sin (Rad)" path="rsin.lua"> Sine. (Radians) </item>
+		<item name="Sin (Deg)" path="dsin.lua"> Sine. (Degrees) </item>
+		<item name="Tan (Rads)" path="rtan.lua"> Tangent. (Radians) </item>
+		<item name="Tan (Deg)" path="dtan.lua"> Tangent. (Degrees) </item>
+		
+		<item name="Deg To Rad" path="d2r.lua"> Convert Degrees to Radians. </item>
+		<item name="Rad To Deg" path="r2d.lua"> Convert Radians to Degrees. </item>
+		
+	</category>
+	
+	<!-- Bitwise Operations -->
+	<category name="Bitwise" path="bitwise">
+		
+		<item name="And" path="band.lua"> Bitwise AND. (A &amp; B) [Values floored (int32)] </item>
+		<item name="Left Shift" path="lshift.lua"> Bitwise Left Shift. (A &lt;&lt; B) [Values floored (int32)] </item>
+		<item name="NAnd" path="bnand.lua"> Bitwise NOT AND. ~(A &amp; B) [Values floored (int32)] </item>
+		<item name="NOr" path="bnor.lua"> Bitwise NOT OR. ~(A | B) [Values floored (int32)] </item>
+		<item name="Not" path="bnot.lua"> Bitwise Not. (~A) [Values floored (int32)] </item>
+		<item name="Or" path="bor.lua"> Bitwise OR. (A | B) [Values floored (int32)] </item>
+		<item name="Right Shift" path="rshift.lua"> Bitwise Right Shift. (A &gt;&gt; B) [Values floored (int32)] </item>
+		<item name="XNOr" path="bxnor.lua"> Bitwise NOT OR. ~(A ^ B) [Values floored (int32)] </item>
+		<item name="XOr" path="bxor.lua"> Bitwise NOT OR. (A ^ B) [Values floored (int32)] </item>
+		
+	</category>
+	
+	<!-- String Manipulation -->
+	<category name="String" path="string">
+		
+		<item name="Append" path="concat.lua"> Append a string / Concatenate two strings. </item>
+		<item name="Char At (Code)" path="charn.lua"> Extract a character from a string. (Outputs character code) </item>
+		<item name="Char At (String)" path="chars.lua"> Extract a character from a string. (Outputs a single-character string) </item>
+		<item name="Char to Code" path="char2code.lua"> Convert a character (single-character string or first character) to its character code. </item>
+		<item name="Code to Char" path="code2char.lua"> Convert a character code into a character. (single-character string) </item>
+		<item name="Find" path="find.lua"> Finds the first occurrence of a pattern in a string. (Outputs the starting position of the match, outputs 0 if no match is found) </item>
+		<item name="Insert" path="insert.lua"> Insert a string at a specific spot. </item>
+		<item name="Length" path="len.lua"> Get the length of a string. </item>
+		<item name="Remove" path="remove.lua"> Remove a peice of a string from start to end. </item>
+		<item name="Repeat" path="repeat.lua"> Repeat a string N times. </item>
+		<item name="Replace" path="replace.lua"> Replace occurrences of a pattern in a string. </item>
+		<item name="Reverse" path="reverse.lua"> Reverse a string. </item>
+		<item name="Substring" path="substr.lua"> Extract a substring from a string from positions Start to End. </item>
+		<item name="To Lower" path="tolower.lua"> Convert characters in a string to its lower-case form. </item>
+		<item name="To Upper" path="toupper.lua"> Convert characters in a string to its upper-case form. </item>
+		<item name="To Number" path="tonumber.lua"> Converts a string into a number. </item>
+		<item name="To String" path="tostring.lua"> Converts a number into a string. </item>
+		
+	</category>
+	
+	<!-- Value Storage -->
+	<category name="Storage" path="storage">
+		
+		<item name="D Flip-Flop" path="dlatch.lua"> Data Latch. Captures last non-zero value at D. </item>
+		<item name="D Flip-Flop (Clocked)" path="dclklatch.lua"> Data Latch. Captures value when clocked. </item>
+		<item name="List" path="listarray.lua"> Add/Remove values, dynamic size. [Use sparingly] </item>
+		<item name="Map" path="maparray.lua"> Add/Remove values, dynamic size, uses string keys. [Use sparingly] </item>
+		<item name="SR Flip-Flop" path="srlatch.lua"> Set-Reset Latch. Holds last non-zero value of Set. Reset to return to zero. </item>
+		<item name="Store [16]" path="16store.lua"> 16 slot storage. </item>
+		<item name="Store [256]" path="256store.lua"> 256 slot storage. </item>
+		<item name="Store [1K]" path="1kstore.lua"> 1K (1024) slot storage. </item>
+		<item name="Store [16K]" path="16kstore.lua"> 16K (16384) slot storage. </item>
+		<item name="Store [64K]" path="64kstore.lua"> 64K (65536) slot storage. </item>
+		<item name="Toggle Flip-Flop" path="toggle.lua"> Toggle latch. Clock to toggle output. </item>
+		
+	</category>
+	
+	<!-- User Input/Output -->
+	<category name="IO" path="io" >
+		
+		<item name="Buffer" path="buffer.lua"> Buffer. NOTE: This component is temperary! </item>
+		<item name="Button" path="button.lua"> A clickable button. </item>
+		<item name="Constant Value" path="value.lua"> Create a value that doesn&apos;t change. </item>
+		<item name="Key" path="key.lua"> Captures key presses. </item>
+		<item name="Message" path="msg.lua"> Send a message to the game Log. </item>
+		<item name="Tablet" path="tablet.lua"> Captures mouse movement. </item>
+		
+	</category>
+	
+	<!-- Visual Indicators, Graphics, and Displays -->
+	<category name="Display" path="graphics">
+		
+		<item name="Console Screen" path="console.lua"> Write text to screen. </item>
+		<item name="Graphics Screen" path="graphicsscreen.lua"> Draw pixels to screen. [Uses RT] </item>
+		<item name="Label" path="label.lua"> Create simple text. </item>
+		<item name="LED" path="ledlight.lua"> Glows if input is true. (Not Zero nor Empty) </item>
+		<item name="Light" path="light.lua"> Advanced light. </item>
+		<item name="Progress Bar" path="progress.lua"> A left-to-right progress bar graphic. </item>
+		<item name="Screen" path="screen.lua"> Display input values. </item>
+		
+	</category>
+	
+</package>

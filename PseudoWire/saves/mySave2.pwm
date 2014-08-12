@@ -1,0 +1,42 @@
+<savefile scrx="0" scry="0">
+    <item x="171" y="196" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="1" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="225" y="225" pkg="Standard" catg="Logic" itm="Not">
+        <in port="0" cport="0" cid="0" />
+    </item>
+    <item x="314" y="210" pkg="Standard" catg="Time" itm="Timer">
+        <in port="0" cport="0" cid="0" />
+        <in port="1" cport="0" cid="4" />
+    </item>
+    <item x="381" y="281" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="2" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="256" y="270" pkg="Standard" catg="Logic" itm="Or">
+        <in port="0" cport="0" cid="1" />
+        <in port="1" cport="0" cid="5">
+            <point x="592" y="223" />
+            <point x="543" y="288" />
+            <point x="469" y="332" />
+            <point x="354" y="349" />
+            <point x="236" y="351" />
+            <point x="226" y="316" />
+        </in>
+    </item>
+    <item x="523" y="183" pkg="Standard" catg="Logic" itm="And">
+        <in port="0" cport="0" cid="0">
+            <point x="273" y="196" />
+        </in>
+        <in port="1" cport="0" cid="6" />
+    </item>
+    <item x="450" y="212" pkg="Standard" catg="Comparison" itm="Greater Than">
+        <in port="0" cport="0" cid="2" />
+        <in port="1" cport="0" cid="3" />
+    </item>
+</savefile>

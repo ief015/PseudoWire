@@ -1,0 +1,67 @@
+<savefile scrx="53" scry="111">
+    <item x="170" y="193" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="fast" />
+    </item>
+    <item x="245" y="222" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="0" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="280" y="210" pkg="Standard" catg="Time" itm="Dispatcher">
+        <in port="0" cport="0" cid="0" />
+        <in port="2" cport="0" cid="1" />
+    </item>
+    <item x="290" y="399" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="cls" />
+    </item>
+    <item x="287" y="353" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="back&#x0A;space" />
+    </item>
+    <item x="170" y="147" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="single" />
+    </item>
+    <item x="336" y="210" pkg="Standard" catg="Logic" itm="Or">
+        <in port="0" cport="0" cid="5" />
+        <in port="1" cport="0" cid="2" />
+    </item>
+    <item x="295" y="290" pkg="Standard" catg="Math" itm="Random">
+        <in port="0" cport="0" cid="6" />
+        <in port="1" cport="0" cid="8" />
+        <in port="2" cport="0" cid="9" />
+        <data tkey="str" key="randtype" tval="num" value="3" />
+        <data tkey="str" key="nseed" tval="num" value="0" />
+        <data tkey="str" key="bseed" tval="bool" value="0" />
+    </item>
+    <item x="233" y="293" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="65" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="233" y="302" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="100" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="460" y="234" pkg="Standard" catg="Display" itm="Console Screen">
+        <in port="0" cport="0" cid="6" />
+        <in port="1" cport="0" cid="7" />
+        <in port="2" cport="0" cid="4" />
+        <in port="3" cport="0" cid="3" />
+    </item>
+</savefile>

@@ -1,0 +1,44 @@
+<savefile scrx="0" scry="0">
+    <item x="54" y="128" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="0" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="325" y="154" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="0" />
+    </item>
+    <item x="326" y="208" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="9" />
+    </item>
+    <item x="394" y="208" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="2" />
+    </item>
+    <item x="462" y="174" pkg="Standard" catg="Logic" itm="Or">
+        <in port="0" cport="0" cid="1" />
+        <in port="1" cport="0" cid="3" />
+    </item>
+    <item x="537" y="173" pkg="Standard" catg="Math" itm="Increment">
+        <in port="0" cport="0" cid="4" />
+        <in port="1" cport="0" cid="6" />
+    </item>
+    <item x="467" y="226" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="1" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="307" y="118" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="5">
+            <point x="595" y="177" />
+            <point x="503" y="152" />
+            <point x="316" y="147" />
+        </in>
+    </item>
+    <item x="199" y="216" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="0" />
+    </item>
+    <item x="262" y="213" pkg="Standard" catg="Math" itm="Add">
+        <in port="0" cport="0" cid="8" />
+    </item>
+</savefile>

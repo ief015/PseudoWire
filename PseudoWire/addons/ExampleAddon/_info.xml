@@ -1,0 +1,5 @@
+<package name="Example" author="Jamie" version="1.0.0">
+	<category name="Math" path="math">
+		<item name="Adding Example" path="adding.lua"> My first component! </item>
+	</category>
+</package>

@@ -1,0 +1,29 @@
+<savefile scrx="0" scry="0">
+    <item x="212" y="208" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="1" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="258" y="271" pkg="Standard" catg="Logic" itm="Not">
+        <in port="0" cport="0" cid="0" />
+    </item>
+    <item x="318" y="220" pkg="Standard" catg="Time" itm="Timer">
+        <in port="0" cport="0" cid="0" />
+        <in port="1" cport="0" cid="4" />
+    </item>
+    <item x="369" y="314" pkg="Standard" catg="IO" itm="Constant Value">
+        <data tkey="str" key="type" tval="num" value="0" />
+        <data tkey="str" key="valuenum" tval="num" value="2" />
+        <data tkey="str" key="valuestr" tval="str" value="" />
+    </item>
+    <item x="296" y="280" pkg="Standard" catg="Logic" itm="Or">
+        <in port="0" cport="0" cid="1" />
+        <in port="1" cport="0" cid="5" />
+    </item>
+    <item x="434" y="243" pkg="Standard" catg="Comparison" itm="Greater Than">
+        <in port="0" cport="0" cid="2" />
+        <in port="1" cport="0" cid="3" />
+    </item>
+</savefile>

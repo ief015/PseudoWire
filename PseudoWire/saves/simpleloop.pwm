@@ -1,0 +1,23 @@
+<savefile scrx="0" scry="0">
+    <item x="249" y="116" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="1" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="354" y="116" pkg="Standard" catg="Time" itm="Timer">
+        <in port="0" cport="0" cid="0" />
+        <in port="1" cport="0" cid="2">
+            <point x="554" y="209" />
+            <point x="431" y="225" />
+            <point x="329" y="178" />
+        </in>
+    </item>
+    <item x="482" y="132" pkg="Standard" catg="Comparison" itm="Greater Than">
+        <in port="0" cport="0" cid="1" />
+    </item>
+    <item x="515" y="79" pkg="Standard" catg="Display" itm="Screen">
+        <in port="0" cport="0" cid="1" />
+    </item>
+</savefile>

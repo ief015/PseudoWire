@@ -1,0 +1,6 @@
+<package name="Developer Debug" author="ief015" version="1.0.0">
+	<category name="Debug" path="dbg">
+		<item name="Newline" path="newline.lua"> Print newline. </item>
+		<item name="Sampler" path="sampler.lua"> Get input and print. </item>
+	</category>
+</package>

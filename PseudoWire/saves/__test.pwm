@@ -1,0 +1,12 @@
+<savefile scrx="0" scry="0">
+    <item x="249" y="118" pkg="Standard" catg="IO" itm="Button">
+        <data tkey="str" key="toggleable" tval="bool" value="1" />
+        <data tkey="str" key="val_on" tval="num" value="1" />
+        <data tkey="str" key="val_off" tval="num" value="0" />
+        <data tkey="str" key="down" tval="bool" value="0" />
+        <data tkey="str" key="text" tval="str" value="" />
+    </item>
+    <item x="372" y="109" pkg="Standard" catg="Display" itm="LED">
+        <in port="0" cport="0" cid="0" />
+    </item>
+</savefile>

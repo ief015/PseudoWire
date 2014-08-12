@@ -1,0 +1,58 @@
+<!-- Pseudo Wire User Settings -->
+
+<settings>
+
+	<!--
+		Battery Saver
+		Values:
+			0 = Off - Highest performance (Uses the most of your CPU, not recommended for laptops)
+			1 = Always On - Saves battery and uses less CPU, lowers performance (Forces the game to slow down, recommended for laptops)
+			2 = Auto - Automatically adjusts performance, using less CPU when not doing anything (Default)
+		Force Pseudo Wire to use less CPU.
+	-->
+	<set
+		name="batterysaver"
+		value="2"
+	/>
+	
+	<!--
+		Grid Size
+		# of pixels
+		The size of the grid during Grid Mode.
+	-->
+	<set
+		name="gridsize"
+		value="8"
+	/>
+
+	<!--
+		Screen Width
+		# of pixels
+		The width of the game window.
+	-->
+	<set
+		name="screenwidth"
+		value="800"
+	/>
+
+	<!--
+		Screen Height
+		# of pixels
+		The height of the game window.
+	-->
+	<set
+		name="screenheight"
+		value="600"
+	/>
+
+	<!--
+		Fullscreen
+		0 = off, 1 = on
+		Set the screen to fullscreen. (Using the set window dimensions above)
+	-->
+	<set
+		name="fullscreen"
+		value="0"
+	/>
+	
+</settings>
