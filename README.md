@@ -1,12 +1,12 @@
 NOTICE - READ FIRST
 ===================
 
-This is the source code for an old project of mine called Pseudo Wire, which was created while I was learning how to program in C++ a few years back.
-Here, by request, I've uploaded the source as it was where I last left off. The code you see here may be poorly formatted, poorly designed, riddled with bugs, or outright uncompilable.
+This is the source code for an old project of mine called *Pseudo Wire*, which was created while I was learning how to program in C++ a few years back.
+Here, by request, I've uploaded the source as it was where I last left off. **The code you see here may be poorly formatted, poorly designed, riddled with bugs, or outright uncompilable**.
 
 This project source is for educational purposes, but you may do as you wish with it. Just don't steal it!
 
-This project uses SFML (Simple Fast Multimedia Library), TinyXML, and a slightly modified version of Lua 5.1.4.
+This project uses *SFML (Simple Fast Multimedia Library)*, *TinyXML*, and a slightly modified version of *Lua 5.1.4*.
 
 LICENSE (zlib)
 ==============
