@@ -8,6 +8,12 @@ This project source is for educational purposes, but you may do as you wish with
 
 This project uses *SFML (Simple Fast Multimedia Library)*, *TinyXML*, and a slightly modified version of *Lua 5.1.4*.
 
+LINKS
+=====
+
+- [Pseudo Wire - Information and Downloads](http://goo.gl/ZCLKe)
+- [Wiremod Thread](http://www.wiremod.com/forum/wiremod-general-chat/28708-pseudo-wire-stable-scriptable-2d-wiremod-sim.html)
+
 LICENSE (zlib)
 ==============
 
