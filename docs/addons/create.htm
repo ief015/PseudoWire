@@ -1,0 +1,100 @@
+<html>
+
+<head>
+	<title>Pseudo Wire Reference - Creating Addons</title>
+	<link rel="stylesheet" type="text/css" href="../doc.css"/>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+</head>
+
+<body>
+	<table border="0" width="800px">
+	<tr>
+	<td align="left" valign="bottom"><a name="top" href="../index.htm"><h1>Pseudo Wire Reference</h1></a></td>
+	<td align="right"><a href="http://www.sfml-dev.org/"><img src="../sfml-small.png" alt="SFML"/></a></td>
+	<td align="right"><a href="http://www.lua.org/"><img src="../powered-by-lua.png" alt="Lua"/></a></td>
+	</tr>
+	</table>
+	
+	<div>
+		<h2>Structure of a Package</h2>
+		<a href="#luafolder">The <code>lua</code> Folder</a><br/>
+		<a href="#imgfolder">The <code>img</code> Folder</a><br/>
+		<a href="#fntfolder">The <code>fnt</code> Folder</a><br/>
+		<a href="#infofile">The <code>info.xml</code> File</a><br/>
+		
+		<a name="luafolder"><h3>The lua Folder</h3></a>
+		<p>
+			<code>../PseudoWire/addons/ExampleAddon/lua/</code><br/>
+			<br/>
+			The <code>lua</code> folder contains all the Lua scripts the addon is associated with.<br/>
+			Inside the lua folder contains folders that represent categories in the <a href="../howtoplay.htm#spawnlist">Spawn List</a> in-game.<br/>
+			All respective scripts are located in these category folders.<br/>
+			<br/>
+			<code>Example: ../PseudoWire/addons/ExampleAddon/lua/math/addition.lua</code>
+		</p>
+		
+		<a name="imgfolder"><h3>The img Folder</h3></a>
+		<p>
+			<code>../PseudoWire/addons/ExampleAddon/img/</code><br/>
+			<br/>
+			The <code>img</code> folder contains all image resources to be included with the package.<br/>
+			<br/>
+			<code>Example: ../PseudoWire/addons/ExampleAddon/img/addingchip.png</code>
+		</p>
+		<a name="fntfolder"><h3>The fnt Folder</h3></a>
+		<p>
+			<code>../PseudoWire/addons/ExampleAddon/fnt/</code><br/>
+			<br/>
+			The <code>fnt</code> folder contains all font resources to be included with the package.<br/>
+			<br/>
+			<code>Example: ../PseudoWire/addons/ExampleAddon/fnt/myfont.ttf</code>
+		</p>
+		
+		<a name="infofile"><h3>info.xml</h3></a>
+		<p>
+			<code>../PseudoWire/addons/ExampleAddon/info.xml</code><br/>
+			<br/>
+			The <code>info.xml</code> file is used to send information about the package to Pseudo Wire.<br/>
+			<br/>
+			<code>info.xml</code> include information about the package itself; <code>Name</code>, <code>Author</code> and <code>Version</code>.<br/>
+			It also carries information about the Lua scripts associated with the package. This information includes; <code>Name</code>, <code>Category</code>, <code>Path Name</code>, and a short description.<br/>
+			<br/>
+			<b>Note: </b><code>info.xml</code> <b>must</b> be placed in the root of the addon folder, or the package will be ignored and skipped!<br/>
+			<br/>
+			Here's a small example of an <code>info.xml</code> file:<br/>
+			<br/>
+			
+			<table border="2"><tr><td><code>
+				&lt;<b>package</b> name="Example" author="Jamie" version="0.9.0 BETA"&gt;</br>
+				&nbsp;&nbsp;&lt;<b>category</b> name="Math" path="math"&gt;</br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b>item</b> name="Add" path="addition.lua"&gt; Addition. (Out = A + B + C + D) &lt;/<b>item</b>&gt;</br>
+				&nbsp;&nbsp;&lt;/<b>category</b>&gt;</br>
+				&lt;/<b>package</b>&gt;</br>
+			</code></td></tr><table>
+			
+		</p>
+		
+		<h4>&lt;package&gt;</h4>
+		<p>
+			<b><code>name: </code></b>A string of text that represents the name of the package. (This and the addon folder name do not need to be the same.)<br/>
+			<b><code>author: </code></b>A string of text that represents the name of the author(s) who wrote the package.<br/>
+			<b><code>version: </code></b>A string of text that represents the version of the package.<br/>
+		</p>
+		<h4>&lt;category&gt;</h4>
+		<p>
+			<b><code>name: </code></b>The name of the category displayed in-game.<br/>
+			<b><code>path: </code></b>The folder name inside <code>../PseudoWire/addons/Example/lua/</code><br/>
+		</p>
+		<h4>&lt;item&gt;</h4>
+		<p>
+			<b><code>name: </code></b>The name of the component displayed in-game.<br/>
+			<b><code>path: </code></b>The Lua script file inside the respective category folder. (see <code>&lt;category&gt;</code> above)<br/>
+			<b><code>Value between tags: </code></b>A short description of the item displayed in-game.
+		</p>
+		<br/>
+	</div>
+	
+	<footer> <a href="install.htm">&lt;&lt; Installation</a> <a href="#top">Back to Top</a> </footer>
+	
+</body>
+</html>

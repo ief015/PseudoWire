@@ -1,0 +1,268 @@
+<html>
+<head>
+	<title>Pseudo Wire Reference - How Lua Scripting Works</title>
+	<link rel="stylesheet" type="text/css" href="../doc.css"/>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+</head>
+
+<body>
+
+	<table border="0" width="800px">
+	<tr>
+	<td align="left" valign="bottom"><a name="top" href="../index.htm"><h1>Pseudo Wire Reference</h1></a></td>
+	<td align="right"><a href="http://www.sfml-dev.org/"><img src="../sfml-small.png" alt="SFML"/></a></td>
+	<td align="right"><a href="http://www.lua.org/"><img src="../powered-by-lua.png" alt="Lua"/></a></td>
+	</tr>
+	</table>
+	
+	<h2>Your First Script and Addon - Creating a simple "Adding" gate.</h2>
+	<b>Before we continue, this example assumes you have some knowledge and experience of the Lua language.</b><br/>
+	<br/>
+	<a href="#createpackage">Getting started - Creating the package</a><br/>
+	<a href="#onspawn">Scripting adding.lua - onSpawn()</a><br/>
+	<a href="#oninputstriggered">Scripting adding.lua - onInputsTriggered()</a><br/>
+	<a href="#infoxml">Implementing the Script - info.xml</a><br/>
+	
+	<div>
+		<a name="createpackage"><h3>Getting started - Creating the package</h3></a>
+		<p>
+			<b>1.</b> First, we need to create the package.<br/>
+			<b>2.</b> Goto the <code>addons</code> folder where the Pseudo Wire executable is found.<br/>
+			<b>3.</b> Create a folder and name it however you wish. This will be your project's root folder. For this example, I will name it "ExampleAddon"<br/>
+			<b>4.</b> Open you newly created folder and create a file. Rename it to <code>info.xml</code>. This is where all your information about your addon will be stored. <a href="../addons/create.htm#infofile">Read more here</a>.<br/>
+			<b>5.</b> Now create a folder in the same place as the <code>info.xml</code>, rename it to <code>lua</code>. This is where your scripts will be stored.<br/>
+			<b>6.</b> Open the <code>lua</code> folder and create another folder. Rename it to <code>math</code>. This is a category folder which will store any related scripts.<br/>
+			<b>7.</b> Open the <code>math</code> folder and create a file. Rename it to <code>adding.lua</code>. This is your script file for the adding gate.<br/>
+			<b>8.</b> Open <code>adding.lua</code> in the text/script editor of your choise.<br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="onspawn"><h3>Scripting adding.lua - onSpawn()</h3></a>
+		
+		<h4>1. The onSpawn() Event</h4>
+		<p>
+			In <code>adding.lua</code>, create the function <code>Component:onSpawn()</code><br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onSpawn()<br/>
+				<br/>
+				end<br/>
+			</td></tr></table><br/>
+			This function is an event. onSpawn() will be called when the Component is created.<br/><br/>
+		</p>
+			
+		<h4>2. self:SetImage(string filename)</h4>
+		<p>
+			Inside the <code>onSpawn()</code> event, what we want to do first is set the image to represent the component. To do this, we call <code>self:SetImage(string filename)</code>. We'll use the Standard's <code>math_add.png</code> image file.<br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onSpawn()<br/>
+				&nbsp;self:SetImage("math_add.png")<br/>
+				end<br/>
+			</td></tr></table><br/>
+			Note that we don't specify a directory in the calling of <code>SetImage</code>. This is because when all addons are loaded, all images are loaded and names cached. If <code>math_add.png</code> is the only image using that filename of all loaded addons, it will select that image. However, if there is multiple, there may be a conflict issue and the game will load the first loaded image using that name.<br/><br/>
+		</p>
+		
+		<h4>3. self:SetInputs(table inputs)</h4>
+		<p>
+			After the <code>self:SetImage</code> call, we will define the Inputs of the Adding Gate.<br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onSpawn()<br/>
+				&nbsp;self:SetImage("math_add.png")<br/>
+				&nbsp;self:SetInputs( {<br/>
+				&nbsp;&nbsp;{ "A", TYPE_NUMBER, 2, 12 },<br/>
+				&nbsp;&nbsp;{ "B", TYPE_NUMBER, 2, 20 },<br/>
+				&nbsp;&nbsp;{ "C", TYPE_NUMBER, 2, 28 },<br/>
+				&nbsp;&nbsp;{ "D", TYPE_NUMBER, 2, 36 }<br/>
+				&nbsp;} )<br/>
+				end<br/>
+			</td></tr></table><br/>
+			<code>SetInputs</code> is called with a Table of Tables. The table that is sent to <code>SetInputs</code> contains multiple tables, that store information about all of the inputs.<br/>
+			The first table in the table, is <code>"A"</code> input. The <code>"A"</code> table must have four (4) properties, in the following order:<br/><code>string portname, ENUM_TYPE type, number port_x, number port_y</code><br/><br/>
+			<code>portname</code> is a string that represents the name of the input. For example: in game, if you were to wire an input, a context menu of input names will appear. That's where <code>portname</code> comes in.<br/><br/>
+			<code>type</code> tells the game what type of input data does it receive. The different options are:<br/><code>TYPE_NUMBER, TYPE_STRING, TYPE_ANY</code>.<br/><br/>
+			<code>TYPE_ANY</code> will allow any data to be sent to the input. In this case, we'll use TYPE_NUMBER because we want to add all the inputs together into a sum.<br/><br/>
+			<code>port_x</code> and <code>port_y</code> define the local coordinates of the pin. These are needed so that Pseudo Wire knows where to draw the wire link.<br/>
+		</p>
+		
+		<h4>4. self:SetOutputs(table outputs)</h4>
+		<p>
+			Next comes the <code>self:SetOutputs</code> call. This will define the outputs of the Adding Gate.<br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onSpawn()<br/>
+				&nbsp;self:SetImage("math_add.png")<br/>
+				&nbsp;self:SetInputs( {<br/>
+				&nbsp;&nbsp;{ "A", TYPE_NUMBER, 2, 12 },<br/>
+				&nbsp;&nbsp;{ "B", TYPE_NUMBER, 2, 20 },<br/>
+				&nbsp;&nbsp;{ "C", TYPE_NUMBER, 2, 28 },<br/>
+				&nbsp;&nbsp;{ "D", TYPE_NUMBER, 2, 36 }<br/>
+				&nbsp;} )<br/>
+				&nbsp;self:SetOutputs( {<br/>
+				&nbsp;&nbsp;{ "Out", TYPE_NUMBER, self:GetWidth()-2, 12 }<br/>
+				&nbsp;} )<br/>
+				end<br/>
+			</td></tr></table><br/>
+			This is very similar to <code>self:SetInputs</code> in terms of the "Tables in Table."<br/>The only difference is, is that the Output can not use <code>TYPE_ANY</code> as a data type, or an error will occur.<br/><br/>
+			Note that I call <code>self:GetWidth()</code> in the Output's <code>port_x</code>. This is because the pin is located at the opposite side of the image. <code>self:GetWidth()</code> will return the width of the image representing the component.<br/>
+		</p>
+		
+		<h4>5. Optional: self:SetToolTip(string tooltip)</h4>
+		<p>
+			If you wish, you may add a call to <code>self:SetToolTip("Adding Gate")</code> in the <code>onSpawn()</code> event which will display a tooltip when the mouse hovers over the component in game.<br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="oninputstriggered"><h3>Scripting adding.lua - onInputsTriggered()</h3></a>
+		
+		<h4>1. The onInputsTriggered() Event</h4>
+		<p>
+			In <code>adding.lua</code>, create the function <code>Component:onInputsTriggered()</code><br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onInputsTriggered()<br/>
+				<br/>
+				end<br/>
+			</td></tr></table><br/>
+			This function is an event. onInputsTriggered() will be called when the Component has received data from the inputs.<br/><br/>
+		</p>
+		
+		<h4>2. Grabbing the data sent to the inputs</h4>
+		<p>
+			There are three (3) ways to grab the values from the inputs:<br/>
+			<code>self:GetInputValue(number port), self:GetAllInputValues(), self:GetInputsTable()</code><br/><br/>
+			Here are examples on how to use these functions:<br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				local a = self:GetInputValue(1)<br/>
+				a -- value in first port<br/>
+				<br/>
+				local a,b,c,d = self:GetAllInputValues()<br/>
+				a -- value in first port<br/>
+				<br/>
+				local inputs = self:GetInputTable()<br/>
+				inputs[1] -- value in first port
+			</td></tr></table><br/>
+			For this example, we will use <code>self:GetAllInputValues()</code>:</br>
+			<table width="600px" class="codebox"><tr><td><code>
+			function Component:onInputsTriggered()<br/>
+			&nbsp;local a,b,c,d = self:GetAllInputValues()<br/>
+			end<br/>
+			</td></tr></table><br/>
+		</p>
+		
+		<h4>3. Sending the sum out</h4>
+		<p>
+			Now that we have the data of all the inputs, we add them together, and send them out of the Output port using <code>self:TriggerOutput(number port, data)</code>.<br/><br/>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onInputsTriggered()<br/>
+				&nbsp;local a,b,c,d = self:GetAllInputValues()<br/>
+				&nbsp;self:TriggerOutput(1, a+b+c+d)<br/>
+				end
+			</td></tr></table><br/>
+			The second argument for <code>self:TriggerOutput</code> does not have a specific type. You can send data to it as long as it matches with the output's data type. Which in this case, is a number.<br/> 
+		</p>
+		
+		<h4>4. The finished script</h4>
+		<p>
+			We have now finished scripting the <code>adding.lua</code> file. That wasn't so difficult, was it?<br/>
+			Here is what your finished Lua script should look like for <code>adding.lua</code>:</br></br>
+			<table width="600px" class="codebox"><tr><td>
+				function Component:onSpawn()<br/>
+				&nbsp;self:SetImage("math_add.png")<br/>
+				&nbsp;self:SetInputs({<br/>
+				&nbsp;&nbsp;{ "A", TYPE_NUMBER, 2, 12 },<br/>
+				&nbsp;&nbsp;{ "B", TYPE_NUMBER, 2, 20 },<br/>
+				&nbsp;&nbsp;{ "C", TYPE_NUMBER, 2, 28 },<br/>
+				&nbsp;&nbsp;{ "D", TYPE_NUMBER, 2, 36 }<br/>
+				&nbsp;})<br/>
+				&nbsp;self:SetOutputs({<br/>
+				&nbsp;&nbsp;{ "Out", TYPE_NUMBER, self:GetWidth()-2, 12 }<br/>
+				&nbsp;})<br/>
+				&nbsp;self:SetToolTip("Adding Gate")<br/>
+				end<br/>
+				<br/>
+				function Component:onInputsTriggered()<br/>
+				&nbsp;local a,b,c,d = self:GetAllInputValues()<br/>
+				&nbsp;self:TriggerOutput(1, a+b+c+d)<br/>
+				end
+			</td></tr></table><br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="infoxml"><h3>Implementing the Script - info.xml</h3></a>
+		
+		<p>
+			Now what we have to do is implement the script into the addon. This will make Pseudo Wire aware that the script even exists.<br/>
+			Save and Close out of <code>adding.lua</code> and open the info.xml file we created earlier in the root of the addon folder.<br/>
+			<br/>
+			This assumes you have some knowledge of XML.<br/>
+		</p>
+		
+		<h4>The package Tag</h4>
+		<p>
+			In <code>info.xml</code>, create a <code>&lt;package&gt;</code> tag. This is a root tag that will define your addon.<br/>
+			The <code>&lt;package&gt;</code> tag includes three (3) attributes:<br/>
+			<br/>
+			<code>name</code> represents the name of the package. In this example, I will use "Example".<br/>
+			<code>author</code> represents the author(s) of the package. In this example, I will use "Jamie".<br/>
+			<code>version</code> represents the version of the package. In this example, I will use "1.0.0". Version doesn't have to be in this format.<br/>
+			<br/><br/>
+			<table width="750px" class="codebox"><tr><td>
+				&lt;package name="Example" author="Jamie" version="1.0.0" &gt;<br/>
+				<br/>
+				&lt;/package&gt;<br/>
+			</td></tr></table><br/>
+		</p>
+		
+		<h4>The category Tag</h4>
+		<p>
+			Inside the <code>&lt;package&gt;</code> tag, create a <code>&lt;category&gt;</code> tag. This will define a category of items.<br/>
+			The <code>&lt;category&gt;</code> tag includes two (2) attributes:<br/>
+			<br/>
+			<code>name</code> represents the name of the category. In this example, I will use "Math". If a category with the same name exists, it will merge the two together.<br/> 
+			<code>path</code> represents the folder name of this category in the <code>../ExampleAddon/lua/</code> folder. I will use the <code>math</code> folder we created earlier.<br/>
+			<br/><br/>
+			<table width="750px" class="codebox"><tr><td>
+				&lt;package name="Example" author="Jamie" version="1.0.0" &gt;<br/>
+				&nbsp;&lt;category name="Math" path="math" &gt;<br/>
+				<br/>
+				&nbsp;&lt;/category&gt;<br/>
+				&lt;/package&gt;<br/>
+			</td></tr></table><br/>
+		</p>
+		
+		<h4>The item Tag</h4>
+		<p>
+			Inside the <code>&lt;category&gt;</code> tag, create an <code>&lt;item&gt;</code> tag. This will define an item.<br/>
+			The <code>&lt;item&gt;</code> tag includes two (2) attributes:<br/>
+			<br/>
+			<code>name</code> represents the name of the item. In this example, I will use "Adding Example".<br/> 
+			<code>path</code> represents the filename of this item in the <code>../ExampleAddon/lua/math/</code> folder. Use the <code>adding.lua</code> we scripted earlier.<br/>
+			<br/>
+			In between the opening and closing tags, you may place a short description of the item.<br/>
+			<br/><br/>
+			<table width="750px" class="codebox"><tr><td>
+				&lt;package name="Example" author="Jamie" version="1.0.0" &gt;<br/>
+				&nbsp;&lt;category name="Math" path="math" &gt;<br/>
+				&nbsp;&nbsp;&lt;item name="Adding Example" path="adding.lua" &gt; My first component! &lt;/item&gt;<br/>
+				&nbsp;&lt;/category&gt;<br/>
+				&lt;/package&gt;<br/>
+			</td></tr></table><br/>
+		</p>
+		
+		<h4>And, we're done!</h4>
+		<p>
+			Save and Close out of the info.xml, and start up Pseudo Wire.<br/><br/>
+			When you open up the tree menu, open up the <code>Math</code> category. You should see your newly created component in there.<br/>
+			Wire it up, test to make sure it works, and have fun!<br/>
+			<br/>
+			If you wish to continue scripting, check out the <a href="api/index.htm">Pseudo Wire Lua API</a> to learn more script functions.
+		</p>
+		
+	</div>
+	
+	<footer>
+		<a href="#top">Back to Top</a>
+	</footer>
+	
+</body>
+</html>

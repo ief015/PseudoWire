@@ -1,0 +1,233 @@
+body {
+	color: #000000;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: justify;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+a:hover {
+	color: #5F99AF;
+}
+
+p {
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+td {
+	font-size: 14px;
+}
+
+ul {
+	font-family: "courier new", serif;
+	font-size: 16px;
+	margin-left: 20px;
+}
+
+h1, h2, h3, h4 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+}
+
+h1, h4 {
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: normal;
+	font-style: italic;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+h2, h3 {
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: -30px;
+	background-color: #C0D0FF;
+}
+
+a:link {
+	font-style: italic;
+}
+
+div {
+	display: inline;
+}
+
+/* TODO tag */
+todo {
+	padding-top: 0.02in;
+	padding-bottom: 0.02in;
+	padding-left: 0.1in;
+	padding-right: 0.1in;
+	text-align: justify;
+	background-color: #FF0000;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* code tag, for code-related text */
+code {
+	font-family: "courier new", serif;
+	font-size: 15px;
+	/* background-color: #DDDDDD; */
+}
+
+/* bolded code tag, for code-related text */
+bcode {
+	font-family: "courier new", serif;
+	font-size: 15px;
+	font-weight: bold;
+	/* background-color: #DDDDDD; */
+}
+
+/* code box class, for code-related text */
+.codebox {
+	margin-left: 30px;
+	font-family: "courier new", serif;
+	font-size: 15px;
+	background-color: #DDDDDD;
+}
+
+
+.apitnum {
+	background-color: #A3B4FF;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitstr {
+	background-color: #D99076;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apittbl {
+	background-color: #BBE289;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitbool {
+	background-color: #F3E289;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitcol {
+	background-color: #6CE2C3;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitcomp {
+	background-color: #BEBEBE;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitimg {
+	background-color: #B58BFA;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitrt {
+	background-color: #F0A4FA;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitshp {
+	background-color: #85DE5B;
+	width: 1in;
+}
+
+.apitspr {
+	background-color: #5B97CD;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apittxt {
+	background-color: #E3AD60;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitvec {
+	background-color: #BCF316;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitvar {
+	background-color: #DFDFDF;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apitenum {
+	background-color: #D1CEAC;
+	width: 1in;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apivar {
+	width: 100px;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apienum {
+	width: 150px;
+	background-color: #D0D0D0;
+	font-family: "courier new", serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+footer {
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	padding-top: 0.5em;
+	padding-bottom: 1.0em;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: -30px;
+	background-color: #C0D0FF;
+}

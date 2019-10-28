@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<title>Pseudo Wire Reference - What are Addons?</title>
+	<link rel="stylesheet" type="text/css" href="../doc.css"/>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+</head>
+
+<body>
+	<table border="0" width="800px">
+	<tr>
+	<td align="left" valign="bottom"><a name="top" href="../index.htm"><h1>Pseudo Wire Reference</h1></a></td>
+	<td align="right"><a href="http://www.sfml-dev.org/"><img src="../sfml-small.png" alt="SFML"/></a></td>
+	<td align="right"><a href="http://www.lua.org/"><img src="../powered-by-lua.png" alt="Lua"/></a></td>
+	</tr>
+	</table>
+	
+	<div>
+		<h2>What are Addons/Packages?</h2>
+		<p>
+			Addons, also known as Packages, are a package of Lua scripts, images, and other resources bundled up into a format that Pseudo Wire can use.<br/>
+			For the sake of this reference, "package" will refer to the root addon folder and its contents and "addon" will refer to the addon as a whole.<br/>
+			<br/>
+			An example of a package is the Standard Lua Package, which can be found in the <code>addons</code> folder with Pseudo Wire, called <code>standard</code>.<br/>
+			<br/>
+			Addons usually consist of three folders: <code>lua</code>, <code>img</code>, <code>fnt</code> and an XML file, <code>info.xml</code>.<br/>
+			<b>The <code>lua</code> folder</b> contains all of the Lua scripts the package is associated with.<br/>
+			<b>The <code>img</code> folder</b> constains all of the image files that the package will use.<br/>
+			<b>The <code>fnt</code> folder</b> constains all of the font files that the package will use.<br/>
+			<br/>
+			Not all packages will contain all folders, as some packages may associate their Lua scripts with other addon images.<br/>
+			However, all addons must contain the <code>info.xml</code> file, which is read at the root directory of the package so Pseudo Wire knows what Lua scripts to include, their names, categories, and other properties.<br/>
+			<br/>
+			See the <a href="create.htm">Create Addon</a> page for more information on the <code>info.xml</code> file.
+		</p>
+	</div>
+	
+	<footer> <a href="install.htm">Installation &gt;&gt;</a> <a href="#top">Back to Top</a> </footer>
+	
+</body>
+</html>

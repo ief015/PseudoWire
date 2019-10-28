@@ -1,0 +1,1440 @@
+<html>
+<head>
+	<title>Pseudo Wire Reference - Pseudo Wire Lua API - Pseudo Wire Library</title>
+	<link rel="stylesheet" type="text/css" href="../../doc.css"/>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+</head>
+
+<body>
+
+	<table border="0" width="800px">
+	<tr>
+	<td align="left" valign="bottom"><a name="top" href="../../index.htm"><h1>Pseudo Wire Reference</h1></a></td>
+	<td align="right"><a href="http://www.sfml-dev.org/"><img src="../../sfml-small.png" alt="SFML"/></a></td>
+	<td align="right"><a href="http://www.lua.org/"><img src="../../powered-by-lua.png" alt="Lua"/></a></td>
+	</tr>
+	</table>
+	
+	<footer>
+		<a href="index.htm">API Index</a>
+	</footer>
+	
+	<h2>Pseudo Wire Lua API - Pseudo Wire Library</h2>
+	
+	<a href="#gamelib">game Library</a><br/>
+	<a href="#pwluafuncs">Pseudo Wire Lua Functions</a><br/>
+	<a href="#blendenum">BLEND_ENUM Enumerator</a><br/>
+	<a href="#typeenum">TYPE_ENUM Enumerator</a><br/>
+	<a href="#mousebuttonenum">MOUSEBUTTON_ENUM Enumerator</a><br/>
+	<a href="#keyenum">KEY_ENUM Enumerator</a><br/>
+	
+	<div>
+	
+		<h3><a name="gamelib">game Library</a></h3>
+		<a href="#create_rect">game.create_rect</a><br/>
+		<a href="#create_circle">game.create_circle</a><br/>
+		<a href="#create_line">game.create_line</a><br/>
+		<a href="#mouse_x">game.mouse_x</a><br/>
+		<a href="#mouse_y">game.mouse_y</a><br/>
+		<a href="#scr_w">game.scr_w</a><br/>
+		<a href="#scr_h">game.scr_h</a><br/>
+		<a href="#addon_name">game.addon_name</a><br/>
+		<a href="#addon_author">game.addon_author</a><br/>
+		<a href="#addon_version">game.addon_version</a><br/>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+		
+		<a name="create_rect" />
+		<h4>Shape game.create_rect(number x, number y, number width, number height, Color col [, number outline_width [, Color outline_col]])</h4>
+		
+		<table border="0" width="100%">
+			<tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">x</td><td>X position of rectangle - from top-left</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">y</td><td>Y position of rectangle - from top-left</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">width</td><td>Width of rectangle</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">height</td><td>Height of rectangle</td></tr>
+			<tr><td class="apitcol">Color</td><td class="apivar">col</td><td>Colour of the rectangle</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">outline_width</td><td>Optional - When given, an outline will be created. Line width of outline.</td></tr>
+			<tr><td class="apitcol">Color</td><td class="apivar">outline_col</td><td>Optional - Colour of the outline.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Creates a rectangle shape.</br>
+				</br>
+				Returns a Shape object.</br>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Draws a 100x100 yellow rectangle Shape at position {0, 0}<br/>
+				<br/>
+				local myRect = game.create_rect(0, 0, 100, 100, Color(255, 255, 0))<br/>
+				self:Draw(myRect)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+		
+		<a name="create_circle" />
+		<h4>Shape game.create_circle(number x, number y, number radius, Color col [, number outline_width [, Color outline_col]])</h4>
+		
+		<table border="0" width="100%">
+			<tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">x</td><td>X position of circle - from top-left</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">y</td><td>Y position of circle - from top-left</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">radius</td><td>Radius of circle</td></tr>
+			<tr><td class="apitcol">Color</td><td class="apivar">col</td><td>Colour of the rectangle</td></tr>
+			<tr><td class="apitnum">number</td><td class="apivar">outline_width</td><td>Optional - When given, an outline will be created. Line width of outline.</td></tr>
+			<tr><td class="apitcol">Color</td><td class="apivar">outline_col</td><td>Optional - Colour of the outline.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Creates a circle shape.</br>
+				</br>
+				Returns a Shape object.</br>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Draws a 100px radius (200px in diameter) blue circle Shape at position {0, 0}<br/>
+				<br/>
+				local myCircle = game.create_circle(0, 0, 100, Color(0, 0, 255))<br/>
+				self:Draw(myCircle)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+		
+		<a name="create_line" />
+		<h4>Shape game.create_line(number x, number y, number x2, number y2, number thickness, Color col [, number outline_width [, Color ouline_col]])</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">x</td><td>X position of the begin point of the line.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">y</td><td>Y position of the begin point of the line.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">x2</td><td>X position of the end point of the line.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">y2</td><td>Y position of the end point of the line.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">thickness</td><td>Thickness of the line</td></tr>
+			<tr><td class="apitcol">Color</td>
+			<td class="apivar">col</td><td>Color of the line</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">outline_width</td><td>Optional - When given, an outline will be created. Line width of outline.</td></tr>
+			<tr><td class="apitcol">Color</td>
+			<td class="apivar">ouline_col</td><td>Optional - Colour of the outline.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Creates a line shape.<br/>
+				<br/>
+				Returns a Shape object.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Draws a 2.5px thick purple line starting from {0, 0} to {100, 100}<br/>
+				<br/>
+				local myLine = game.create_line(0, 0, 100, 100, 2.5, Color(255, 0, 255))<br/>
+				self:Draw(myLine)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="mouse_x" />
+		<h4>number game.mouse_x()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the X position of the mouse on screen.<br/>
+				<br/>
+				Returns a number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local mousepos = Vector(game.mouse_x(), game.mouse_y())<br/>
+				-- mousepos is a Vector containing mouse coordinates.<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="mouse_y" />
+		<h4>number game.mouse_y()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the Y position of the mouse on screen.<br/>
+				<br/>
+				Returns a number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local mousepos = Vector(game.mouse_x(), game.mouse_y())<br/>
+				-- mousepos is a Vector containing mouse coordinates.<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="scr_w" />
+		<h4>number game.scr_w()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the width of the game window.<br/>
+				<br/>
+				Returns a number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local windowsize = Vector(game.scr_w(), game.scr_h())<br/>
+				-- windowsize is a Vector containing the size of the game window.<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="scr_h" />
+		<h4>number game.scr_h()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the height of the game window.<br/>
+				<br/>
+				Returns a number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local windowsize = Vector(game.scr_w(), game.scr_h())<br/>
+				-- windowsize is a Vector containing the size of the game window.<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="addon_name" />
+		<h4>string game.addon_name()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the name of the addon the script is included in.<br/>
+				This is set in the addon's info.xml<br/>
+				<br/>
+				Returns a string.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Send a message containing the addon name<br/>
+				<br/>
+				local addonname = game.addon_name()<br/>
+				Msg("This script is included with " .. addonname)<br/>
+				-- Outputs "This script is included with ADDONNAME" -- ADDONNAME being the addon's name<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="addon_author" />
+		<h4>string game.addon_author()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the author of the addon the script is included in.<br/>
+				This is set in the addon's info.xml<br/>
+				<br/>
+				Returns a string.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Send a message containing the addon name<br/>
+				<br/>
+				local addonauthor = game.addon_author()<br/>
+				Msg("The author of this script is " .. addonauther)<br/>
+				-- Outputs "The author of this script is AUTHOR" -- AUTHOR being the author's name<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="addon_version" />
+		<h4>string game.addon_version()</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td>None.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get the version of the addon the script is included in.<br/>
+				This is set in the addon's info.xml<br/>
+				<br/>
+				Returns a string.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Send a message containing the version string of the addon<br/>
+				<br/>
+				local addonversion = game.addon_version()<br/>
+				Msg("Addon Version: " .. addonauther)<br/>
+				-- Outputs "Addon Version: 1.0.0" -- That is, if "1.0.0" is the version string of the addon<br/>
+			</td></tr>
+		</table>
+
+	</div>
+	
+	<div>
+		<h3><a name="pwluafuncs">Pseudo Wire Lua Functions</a></h3>
+		
+		<a href="#pw_BIT_LSHIFT">BIT_LSHIFT</a><br/>
+		<a href="#pw_BIT_RSHIFT">BIT_RSHIFT</a><br/>
+		<a href="#pw_BIT_AND">BIT_AND</a><br/>
+		<a href="#pw_BIT_OR">BIT_OR</a><br/>
+		<a href="#pw_BIT_XOR">BIT_XOR</a><br/>
+		<a href="#pw_BIT_NOT">BIT_NOT</a><br/>
+		
+		<a href="#pw_CharIsControl">CharIsControl</a><br/>
+		<a href="#pw_CharIsGraphical">CharIsGraphical</a><br/>
+		<a href="#pw_CharIsPrintable">CharIsPrintable</a><br/>
+		<a href="#pw_CharIsDigit">CharIsDigit</a><br/>
+		<a href="#pw_CharIsPunctuation">CharIsPunctuation</a><br/>
+		<a href="#pw_CharIsAlphabetical">CharIsAlphabetical</a><br/>
+		<a href="#pw_CharIsAlphaNum">CharIsAlphaNum</a><br/>
+		<a href="#pw_CharIsXDigit">CharIsXDigit</a><br/>
+		<a href="#pw_CharIsUppercase">CharIsUppercase</a><br/>
+		<a href="#pw_CharIsLowercase">CharIsLowercase</a><br/>
+		
+		<a href="#pw_IFELSE">IFELSE</a><br/>
+		
+		<a href="#pw_IsNil">IsNil</a><br/>
+		<a href="#pw_IsNumber">IsNumber</a><br/>
+		<a href="#pw_IsString">IsString</a><br/>
+		<a href="#pw_IsBoolean">IsBoolean</a><br/>
+		<a href="#pw_IsFunction">IsFunction</a><br/>
+		<a href="#pw_IsTable">IsTable</a><br/>
+		<a href="#pw_IsUserdata">IsUserdata</a><br/>
+		
+		<a href="#pw_KeycodeToString">KeycodeToString</a><br/>
+		
+		<a href="#pw_Msg">Msg</a><br/>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_BIT_LSHIFT" />
+		<h4>number BIT_LSHIFT(number v, number n)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">v</td><td>Number to bitshift left <code>n</code> times. <code>v</code> is floored.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">n</td><td>Number of times to bitshift.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Bitwise Operator - Bitshift Left<br/>
+				Shift all binary bits to the left <code>n</code> times.<br/>
+				<br/>
+				Returns a bitshifted number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = 5<br/>
+				-- 5 in binary is 00000101<br/>
+				-- 5 shifted to the left 2 times is 00010100, which in decimal is 20<br/>
+				a = BIT_LSHIFT(a, 2)<br/>
+				-- a is now 20<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_BIT_RSHIFT" />
+		<h4>number BIT_RSHIFT(number v, number n)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">v</td><td>Number to bitshift right <code>n</code> times. <code>v</code> is floored.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">n</td><td>Number of times to bitshift.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Bitwise Operator - Bitshift Right<br/>
+				Shift all binary bits to the right <code>n</code> times.<br/>
+				<br/>
+				Returns a bitshifted number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = 20<br/>
+				-- 20 in binary is 00010100<br/>
+				-- 20 shifted to the right 2 times is 00000101, which in decimal is 5<br/>
+				a = BIT_RSHIFT(a, 2)<br/>
+				-- a is now 5<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_BIT_AND" />
+		<h4>number BIT_AND(number a, number b)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">a</td><td>First value. <code>a</code> is floored.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">b</td><td>Second value. <code>b</code> is floored.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Bitwise Operator - Bitwise And<br/>
+				Performs a 32-bit logical And for each bit.<br/>
+				<br/>
+				Returns the resulting number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = 202<br/>
+				local b = 105<br/>
+				-- 202 in binary is: &nbsp;&nbsp;11001010<br/>
+				-- 105 in binary is: &nbsp;&nbsp;01101001<br/>
+				-- Bitwise And result: 01001000<br/>
+				a = BIT_AND(a, b)<br/>
+				-- a is now 72<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_BIT_OR" />
+		<h4>number BIT_OR(number a, number b)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">a</td><td>First value. <code>a</code> is floored.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">b</td><td>Second value. <code>b</code> is floored.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Bitwise Operator - Bitwise Or<br/>
+				Performs a 32-bit logical Or for each bit.<br/>
+				<br/>
+				Returns the resulting number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = 202<br/>
+				local b = 105<br/>
+				-- 202 in binary is: &nbsp;11001010<br/>
+				-- 105 in binary is: &nbsp;01101001<br/>
+				-- Bitwise Or result: 11101011<br/>
+				a = BIT_OR(a, b)<br/>
+				-- a is now 235<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_BIT_XOR" />
+		<h4>number BIT_XOR(number a, number b)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">a</td><td>First value. <code>a</code> is floored.</td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">b</td><td>Second value. <code>b</code> is floored.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Bitwise Operator - Bitwise XOr<br/>
+				Performs a 32-bit logical XOr for each bit.<br/>
+				<br/>
+				Returns the resulting number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = 202<br/>
+				local b = 105<br/>
+				-- 202 in binary is: &nbsp;&nbsp;11001010<br/>
+				-- 105 in binary is: &nbsp;&nbsp;01101001<br/>
+				-- Bitwise XOr result: 10100011<br/>
+				a = BIT_XOR(a, b)<br/>
+				-- a is now 163<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_BIT_NOT" />
+		<h4>number BIT_XOR(number a)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">a</td><td>Value to perform operation on. <code>a</code> is floored.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Bitwise Operator - Bitwise Not<br/>
+				Performs a 32-bit logical Not for each bit.<br/>
+				<br/>
+				Returns the resulting number.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = 202<br/>
+				-- Since these Bitwise operators are 32-bit, all 32 bits are calculated.<br/>
+				-- 202 in binary is: &nbsp;&nbsp;00000000 00000000 00000000 11001010<br/>
+				-- Bitwise Not result: 11111111 11111111 11111111 00110101<br/>
+				<br/>
+				-- If you want to grab only the first byte, use BIT_AND as such:<br/>
+				-- BIT_AND(BIT_NOT(a, b), 255) -- 255 is 00000000 00000000 00000000 11111111 -- See <a href="#pw_BIT_AND">BIT_AND</a> for more details<br/>
+				<br/>
+				a = BIT_NOT(a, b)<br/>
+				-- a is now 4294967093<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsControl" />
+		<h4>boolean CharIsControl(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is a control character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsControl(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (iscntrl)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsGraphical" />
+		<h4>boolean CharIsGraphical(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is a graphical (not whitespace or control) character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsGraphical(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isgraph)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsPrintable" />
+		<h4>boolean CharIsPrintable(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is a printable (not a control) character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsPrintable(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isprint)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsDigit" />
+		<h4>boolean CharIsDigit(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				local b = CharIsDigit(string.byte('a'))<br/>
+				Check if character is a numerical digit character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsDigit(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isdigit)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsPunctuation" />
+		<h4>boolean CharIsPunctuation(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is a punctuation character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsPunctuation(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (ispunct)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsAlphabetical" />
+		<h4>boolean CharIsAlphabetical(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is an alphabetical character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsAlphabetical(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isalpha)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsAlphaNum" />
+		<h4>boolean CharIsAlphaNum(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is an alphabetical or a numerical digit character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsAlphaNum(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isalnum)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsXDigit" />
+		<h4>boolean CharIsXDigit(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is a numerical digit character (including hexadecimal alphabetical characters.)<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsXDigit(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isxdigit)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsUppercase" />
+		<h4>boolean CharIsUppercase(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is an UPPERCASE alphabetical character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsUppercase(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (isupper)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_CharIsLowercase" />
+		<h4>boolean CharIsLowercase(number asciicode)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitnum">number</td>
+			<td class="apivar">asciicode</td><td>The character in ASCII.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Check if character is a lowercase alphabetical character.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local b = CharIsLowercase(string.byte('a'))<br/>
+				-- see <a href="http://www.cplusplus.com/reference/clibrary/cctype/">http://www.cplusplus.com/reference/clibrary/cctype/</a> for details. (islower)<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IFELSE" />
+		<h4>var IFELSE(boolean condition, var true_value, var false_value)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitbool">boolean</td>
+			<td class="apivar">condition</td><td>The condition result.</td></tr>
+	
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">Name</td><td>The value returned if the condition is true.</td></tr>
+			
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">Name</td><td>The value returned if the condition is false.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Acts as the ?: trinary operator.<br/>
+				If the condition is true, it will return the <code>true_value</code>. Else, it will return the <code>false_value</code><br/>
+				<br/>
+				Returns either <code>true_value</code> or <code>false_value</code> if <code>condition</code> is true or false, respectivly.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local a = IFELSE(someBool, 5, 2)
+				-- if "someBool" is true, a = 5, else a = 2
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsNil" />
+		<h4>boolean IsNil(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is <code>nil</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsNil(obj)) then<br/>
+				&nbsp;Msg("obj is Nil!")
+				end<br/>
+				-- if the obj is nil, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsNumber" />
+		<h4>boolean IsNumber(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is a <code>number</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsNumber(obj)) then<br/>
+				&nbsp;Msg("obj is a number!")
+				end<br/>
+				-- if the obj is a number, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsString" />
+		<h4>boolean IsString(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is a <code>string</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsString(obj)) then<br/>
+				&nbsp;Msg("obj is a string!")
+				end<br/>
+				-- if the obj is a string, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsBoolean" />
+		<h4>boolean IsBoolean(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is a <code>boolean</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsBoolean(obj)) then<br/>
+				&nbsp;Msg("obj is a boolean value!")
+				end<br/>
+				-- if the obj is a boolean, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsFunction" />
+		<h4>boolean IsFunction(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is a <code>function</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsFunction(obj)) then<br/>
+				&nbsp;Msg("obj is a function!")
+				end<br/>
+				-- if the obj is a function, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsTable" />
+		<h4>boolean IsTable(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is a <code>table</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsTable(obj)) then<br/>
+				&nbsp;Msg("I AM THE TABLE")
+				end<br/>
+				-- if the obj is a table, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_IsUserdata" />
+		<h4>boolean IsUserdata(var v)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitvar">var</td>
+			<td class="apivar">v</td><td>Value to check.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Return true if value is <code>userdata</code>.<br/>
+				<br/>
+				Returns a boolean.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				if(IsUserdata(obj)) then<br/>
+				&nbsp;Msg("obj is userdata!")
+				end<br/>
+				-- if the obj is userdata, print a message
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_KeycodeToString" />
+		<h4>string KeycodeToString(KEY_ENUM key)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitenum">KEY_ENUM</td>
+			<td class="apivar">key</td><td>Key value.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Get a string describing the key.<br/>
+				<br/>
+				Returns a string.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				-- Print key description when key is sent to the Component.<br/>
+				function Component:onKeyPressed(key, ctrl, shift, alt)<br/>
+				&nbsp;Msg(KeycodeToString(key))<br/>
+				end<br/>
+			</td></tr>
+		</table>
+		
+		<!-- ---------------------------------------------------------------------------------------------- -->
+		<!-- ---------------------------------------------------------------------------------------------- -->
+
+		<br/><img src="sep.png" width="100%" height="6"/><br/>
+				
+		<a name="pw_Msg" />
+		<h4>nil Msg(string msg)</h4>
+
+		<table border="0" width="100%"><tr><td><b>Parameters:</b></td></tr>
+			<tr><td class="apitstr">string</td>
+			<td class="apivar">msg</td><td>Text to send to game console.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Description:</b></td></tr>
+			<tr><td>
+				Send text to the game console.<br/>
+				<br/>
+				Returns nothing.<br/>
+			</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				Msg("Hello!")<br/>
+				-- Output: "Hello!"<br/>
+			</td></tr>
+		</table>
+		
+	</div>
+	
+	<div>
+		<h3><a name="blendenum">BLEND_ENUM Enumerator</a></h3>
+		
+		<table border="0" width="100%">
+			<tr><p style="font-size:14px;">
+				BlendMode enumerators for graphics.
+			</p></tr>
+			<tr><td class="apienum">BLEND_NONE</td><td>No blending.</td></tr>
+			<tr><td class="apienum">BLEND_ALPHA</td><td>Alpha blending. This is the default for graphical objects.</td></tr>
+			<tr><td class="apienum">BLEND_ADD</td><td>Additive blending.</td></tr>
+			<tr><td class="apienum">BLEND_MULTIPLY</td><td>Multiply blending.</td></tr>
+		</table>
+		<br/>
+		<table border="0" width="100%">
+			<tr><td><b>Example Usage:</b></td></tr>
+			<tr class="codebox"><td>
+				local shp = game.create_rect(0, 0, 100, 100, Color(255, 0, 0))
+				shp:SetBlendMode(BLEND_ADD)
+				self:Draw(shp)
+				--draws an additive 100x100 red rectangle
+			</td></tr>
+		</table>
+	</div>
+	
+	<div>
+		<h3><a name="typeenum">TYPE_ENUM Enumerator</a></h3>
+		
+		<table border="0" width="100%">
+			<tr><p style="font-size:14px;">
+				Port type enumerators for component inputs and outputs.
+			</p></tr>
+			<tr><td class="apienum">TYPE_NUMBER</td><td>Number type.</td></tr>
+			<tr><td class="apienum">TYPE_STRING</td><td>String (Text) type.</td></tr>
+			<tr><td class="apienum">TYPE_ANY</td><td>Any type. This allows any types to be sent to the respective input. Note: This is not allowed for outputs.</td></tr>
+		</table>
+	</div>
+	
+	<div>
+		<h3><a name="mousebuttonenum">MOUSEBUTTON_ENUM Enumerator</a></h3>
+		
+		<table border="0" width="100%">
+			<tr><p style="font-size:14px;">
+				Mouse Button enumerators, usually for mouse button events.
+			</p></tr>
+			<tr><td class="apienum">MOUSEBUTTON_LEFT</td><td>Left mouse button.</td></tr>
+			<tr><td class="apienum">MOUSEBUTTON_RIGHT</td><td>Right mouse button.</td></tr>
+			<tr><td class="apienum">MOUSEBUTTON_MIDDLE</td><td>Middle mouse button.</td></tr>
+			<tr><td class="apienum">MOUSEBUTTON_X1</td><td>X1 mouse button.</td></tr>
+			<tr><td class="apienum">MOUSEBUTTON_X2</td><td>X2 mouse button.</td></tr>
+		</table>
+	</div>
+	
+	<div>
+		<h3><a name="keyenum">KEY_ENUM Enumerator</a></h3>
+		
+		<table border="0" width="100%">
+			<tr><p style="font-size:14px;">
+				Keyboard enumerators, usually for keyboard events.<br/>
+				Note that not all of these enumerators follow ASCII.
+			</p></tr>
+			<tr><td class="apienum">KEY_A</td><td>A</td></tr>
+			<tr><td class="apienum">KEY_B</td><td>B</td></tr>
+			<tr><td class="apienum">KEY_C</td><td>C</td></tr>
+			<tr><td class="apienum">KEY_D</td><td>D</td></tr>
+			<tr><td class="apienum">KEY_E</td><td>E</td></tr>
+			<tr><td class="apienum">KEY_F</td><td>F</td></tr>
+			<tr><td class="apienum">KEY_G</td><td>G</td></tr>
+			<tr><td class="apienum">KEY_H</td><td>H</td></tr>
+			<tr><td class="apienum">KEY_I</td><td>I</td></tr>
+			<tr><td class="apienum">KEY_J</td><td>J</td></tr>
+			<tr><td class="apienum">KEY_K</td><td>K</td></tr>
+			<tr><td class="apienum">KEY_L</td><td>L</td></tr>
+			<tr><td class="apienum">KEY_M</td><td>M</td></tr>
+			<tr><td class="apienum">KEY_N</td><td>N</td></tr>
+			<tr><td class="apienum">KEY_O</td><td>O</td></tr>
+			<tr><td class="apienum">KEY_P</td><td>P</td></tr>
+			<tr><td class="apienum">KEY_Q</td><td>Q</td></tr>
+			<tr><td class="apienum">KEY_R</td><td>R</td></tr>
+			<tr><td class="apienum">KEY_S</td><td>S</td></tr>
+			<tr><td class="apienum">KEY_T</td><td>T</td></tr>
+			<tr><td class="apienum">KEY_U</td><td>U</td></tr>
+			<tr><td class="apienum">KEY_V</td><td>V</td></tr>
+			<tr><td class="apienum">KEY_W</td><td>W</td></tr>
+			<tr><td class="apienum">KEY_X</td><td>X</td></tr>
+			<tr><td class="apienum">KEY_Y</td><td>Y</td></tr>
+			<tr><td class="apienum">KEY_Z</td><td>Z</td></tr>
+			<tr><td class="apienum">KEY_0</td><td>Num 0 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_1</td><td>Num 1 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_2</td><td>Num 2 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_3</td><td>Num 3 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_4</td><td>Num 4 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_5</td><td>Num 5 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_6</td><td>Num 6 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_7</td><td>Num 7 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_8</td><td>Num 8 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_9</td><td>Num 9 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD0</td><td>Numpad 0 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD1</td><td>Numpad 1 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD2</td><td>Numpad 2 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD3</td><td>Numpad 3 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD4</td><td>Numpad 4 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD5</td><td>Numpad 5 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD6</td><td>Numpad 6 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD7</td><td>Numpad 7 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD8</td><td>Numpad 8 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_NUMPAD9</td><td>Numpad 9 (Num and Numpad numbers are different codes)</td></tr>
+			<tr><td class="apienum">KEY_F1</td><td>F1 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F2</td><td>F2 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F3</td><td>F3 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F4</td><td>F4 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F5</td><td>F5 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F6</td><td>F6 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F7</td><td>F7 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F8</td><td>F8 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F9</td><td>F9 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F10</td><td>F10 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F11</td><td>F11 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F12</td><td>F12 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F13</td><td>F13 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F14</td><td>F14 Function Key</td></tr>
+			<tr><td class="apienum">KEY_F15</td><td>F15 Function Key</td></tr>
+			<tr><td class="apienum">KEY_ESCAPE</td><td>ESC</td></tr>
+			<tr><td class="apienum">KEY_LCONTROL</td><td>Left Ctrl (Control)</td></tr>
+			<tr><td class="apienum">KEY_LSHIFT</td><td>Left Shift</td></tr>
+			<tr><td class="apienum">KEY_LALT</td><td>Left Alt (Alternate)</td></tr>
+			<tr><td class="apienum">KEY_LSYSTEM</td><td>Left System Key (sometimes referred to as the "Windows Key")</td></tr>
+			<tr><td class="apienum">KEY_RCONTROL</td><td>Right Ctrl (Control)</td></tr>
+			<tr><td class="apienum">KEY_RSHIFT</td><td>Right Shift</td></tr>
+			<tr><td class="apienum">KEY_RALT</td><td>Right Alt (Alternate)</td></tr>
+			<tr><td class="apienum">KEY_RSYSTEM</td><td>Right System Key (sometimes referred to as the "Windows Key")</td></tr>
+			<tr><td class="apienum">KEY_MENU</td><td>Menu Key (sometimes referred to as the "Context Key" or "Application Key")</td></tr>
+			<tr><td class="apienum">KEY_LBRACKET</td><td>Left Bracket [</td></tr>
+			<tr><td class="apienum">KEY_RBRACKET</td><td>Right Bracket ]</td></tr>
+			<tr><td class="apienum">KEY_SEMICOLON</td><td>Semicolon ;</td></tr>
+			<tr><td class="apienum">KEY_COMMA</td><td>Comma ,</td></tr>
+			<tr><td class="apienum">KEY_PERIOD</td><td>Period .</td></tr>
+			<tr><td class="apienum">KEY_QUOTE</td><td>Quotation '</td></tr>
+			<tr><td class="apienum">KEY_FRONTSLASH</td><td>Front Slash /</td></tr>
+			<tr><td class="apienum">KEY_BACKSLASH</td><td>Back slash \</td></tr>
+			<tr><td class="apienum">KEY_TILDE</td><td>Tilde key ~ or ` (sometimes referred to as the "Grave Accent Key (`)" or "Console Key", as it's a commonly used key for opening an application's console)</td></tr>
+			<tr><td class="apienum">KEY_EQUAL</td><td>Equal =</td></tr>
+			<tr><td class="apienum">KEY_DASH</td><td>Dash/Hyphen -</td></tr>
+			<tr><td class="apienum">KEY_SPACE</td><td>Spacebar</td></tr>
+			<tr><td class="apienum">KEY_RETURN</td><td>Return/Enter/Send</td></tr>
+			<tr><td class="apienum">KEY_BACKSPACE</td><td>Backspace</td></tr>
+			<tr><td class="apienum">KEY_TAB</td><td>Tab</td></tr>
+			<tr><td class="apienum">KEY_PAGEUP</td><td>Page Up (PgUp)</td></tr>
+			<tr><td class="apienum">KEY_PAGEDOWN</td><td>Page Down (PgDn)</td></tr>
+			<tr><td class="apienum">KEY_END</td><td>End</td></tr>
+			<tr><td class="apienum">KEY_HOME</td><td>Home</td></tr>
+			<tr><td class="apienum">KEY_INSERT</td><td>Insert/Ins</td></tr>
+			<tr><td class="apienum">KEY_DELETE</td><td>Delete/Del</td></tr>
+			<tr><td class="apienum">KEY_ADD</td><td>Numpad +</td></tr>
+			<tr><td class="apienum">KEY_SUBTRACT</td><td>Numpad -</td></tr>
+			<tr><td class="apienum">KEY_MULTIPLY</td><td>Numpad *</td></tr>
+			<tr><td class="apienum">KEY_DIVIDE</td><td>Numpad /</td></tr>
+			<tr><td class="apienum">KEY_LEFT</td><td>Left Arrow</td></tr>
+			<tr><td class="apienum">KEY_RIGHT</td><td>Right Arrow</td></tr>
+			<tr><td class="apienum">KEY_UP</td><td>Up Arrow</td></tr>
+			<tr><td class="apienum">KEY_DOWN</td><td>Down Arrow</td></tr>
+			<tr><td class="apienum">KEY_PAUSE</td><td>Pause</td></tr>
+		</table>
+	</div>
+	
+	<br/>
+	
+	<footer>
+		<a href="index.htm">API Index</a> <a href="#top">Back to Top</a>
+	</footer>
+	
+</body>
+</html>

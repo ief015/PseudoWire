@@ -1,0 +1,309 @@
+<html>
+<head>
+	<title>Pseudo Wire Reference - Pseudo Wire Lua API - Index</title>
+	<link rel="stylesheet" type="text/css" href="../../doc.css"/>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+</head>
+
+<body>
+
+	<table border="0" width="800px">
+	<tr>
+	<td align="left" valign="bottom"><a name="top" href="../../index.htm"><h1>Pseudo Wire Reference</h1></a></td>
+	<td align="right"><a href="http://www.sfml-dev.org/"><img src="../../sfml-small.png" alt="SFML"/></a></td>
+	<td align="right"><a href="http://www.lua.org/"><img src="../../powered-by-lua.png" alt="Lua"/></a></td>
+	</tr>
+	</table>
+	
+	<h2>Pseudo Wire Lua API - Index</h2>
+	
+	<a href="#pwlib">Pseudo Wire Library</a><br/>
+	<a href="#color">Color</a><br/>
+	<a href="#component">Component</a><br/>
+	<a href="#image">Image</a><br/>
+	<a href="#rendertexture">RenderTexture</a><br/>
+	<a href="#shape">Shape</a><br/>
+	<a href="#sprite">Sprite</a><br/>
+	<a href="#text">Text</a><br/>
+	<a href="#vector">Vector</a><br/>
+	
+	<h3><a name="pwlib" href="GameLib.htm">Pseudo Wire Library</a></h3>
+	<p>
+		<a href="GameLib.htm#gamelib">game Library</a><br/><br/>
+		<a href="GameLib.htm#pwluafuncs">Pseudo Wire Lua Functions</a><br/><br/>
+		<a href="GameLib.htm#blendenum">BLEND_ENUM Enumerator</a><br/><br/>
+		<a href="GameLib.htm#typeenum">TYPE_ENUM Enumerator</a><br/><br/>
+		<a href="GameLib.htm#mousebuttonenum">MOUSEBUTTON_ENUM Enumerator</a><br/><br/>
+		<a href="GameLib.htm#keyenum">KEY_ENUM Enumerator</a><br/><br/>
+	</p>
+	
+	<h3><a name="color" href="Color.htm">Color</a></h3>
+	<p>
+		Represents a colour. Includes RGBA components that range from 0-255.<br/><br/>
+		
+		<code>
+		
+		Color Color(number r, number g, number b [, number a])<br/>
+		<br>
+		number R([number r])<br/>
+		number G([number g])<br/>
+		number B([number b])<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="component" href="Component.htm">Component</a></h3>
+	<p>
+		A Lua Component. These are the scriptable objects you see in Pseudo Wire.<br/><br/>
+		
+		<code>
+		
+		Component Component()<br/>
+		<br/>
+		nil AddUICheck(string unique_id, string text [, bool checked = false])<br/>
+		nil AddUIKey(string unique_id, string text [, number default = 0])<br/>
+		nil AddUILabel(string text)<br/>
+		nil AddUINumber(string unique_id, string text [, number default = 0 [, number min, number max]])<br/>
+		nil AddUIRadio(string unique_id, string text, string group_id [, bool checked = false])<br/>
+		nil AddUISeparator()<br/>
+		nil AddUIString(string unique_id, string text [, bool multiline = false [, string default = "" [ number height_in_lines]]])<br/>
+		nil Draw(RenderTexture)<br/>
+		nil Draw(Shape shape)<br/>
+		nil Draw(Sprite sprite)<br/>
+		nil Draw(Text text)<br/>
+		... GetAllInputValues()<br/>
+		Vector GetBoundsSize()<br/>
+		number GetHeight()<br/>
+		table GetInputsTable()<br/>
+		TYPE_ENUM GetInputType(number port)<br/>
+		var GetInputValue(number port)<br/>
+		number GetNumInputs()<br/>
+		number GetNumOutputs()<br/>
+		number GetWidth()<br/>
+		boolean IsConnected(number port)<br/>
+		boolean IsInputTriggered(number port)<br/>
+		nil SetBoundsSize(Vector size)<br/>
+		nil SetInputs(table inputs)<br/>
+		boolean SetImage(string filename)<br/>
+		nil SetOutputs(table outputs)<br/>
+		nil SetToolTip(string tooltip)<br/>
+		Vector ToLocal(Vector global)<br/>
+		Vector ToGlobal(Vector local)<br/>
+		nil TriggerOutput(number port, var value)<br/>
+		
+		</code></p><h4>Events</h4><p><code>
+		
+		nil onSpawn()<br/>
+		nil onRemove()<br/>
+		table onGameSave()<br/>
+		nil onGameLoad(table data)<br/>
+		nil onThink(number millisec_dt)<br/>
+		nil onDraw()<br/>
+		boolean onBuildEdit()<br/>
+		nil onEditSubmit(table settings)<br/>
+		nil onInputsTriggered()<br/>
+		nil onInputConnect(number port)<br/>
+		nil onInputUnconnect(number port)<br/>
+		<br/>
+		nil onMousePressed(number local_mx, number local_my, MOUSEBUTTON_ENUM button)<br/>
+		nil onMouseReleased(number local_mx, number local_my, MOUSEBUTTON_ENUM button)<br/>
+		nil onClicked(number local_mx, number local_my, MOUSEBUTTON_ENUM button)<br/>
+		nil onUnclicked(number local_mx, number local_my, MOUSEBUTTON_ENUM button)<br/>
+		nil onMouseMoved(number local_mx, number local_my, number dx, number dy)<br/>
+		nil onMouseMovedInside(number local_mx, number local_my, number dx, number dy)<br/>
+		nil onMouseHoverOver(number local_mx, number local_my)<br/>
+		nil onMouseWheel(number local_mx, number local_my, number delta)<br/>
+		nil onMouseWheelOver(number local_mx, number local_my, number delta)<br/>
+		nil onMouseEnter(number local_mx, number local_my)<br/>
+		nil onMouseLeave(number local_mx, number local_my)<br/>
+		nil onKeyPressed(KEY_ENUM key, boolean shift, boolean ctrl, boolean alt)<br/>
+		nil onKeyReleased(KEY_ENUM key, boolean shift, boolean ctrl, boolean alt)<br/>
+		nil onKeyDown(KEY_ENUM key, boolean shift, boolean ctrl, boolean alt)<br/>
+		nil onKeyUp(KEY_ENUM key, boolean shift, boolean ctrl, boolean alt)<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="image" href="Image.htm">Image</a></h3>
+	<p>
+		Represents an Image. Includes pixel data.<br/><br/>
+		
+		<code>
+		
+		Image Image()<br/>
+		<br/>
+		boolean Load(string filename)<br/>
+		number GetWidth()<br/>
+		number GetHeight()<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="rendertexture" href="RenderTexture.htm">RenderTexture</a></h3>
+	<p>
+		A render buffer. Used to draw objects, but not directly to the screen.<br/>
+		The use of RenderTextures may cause an unstable effect on users that use Intel Integrated Graphics.<br/><br/>
+		
+		<code>
+		
+		RenderTexture RenderTexture()<br/>
+		<br/>
+		boolean Create(Vector size)<br/>
+		boolean Create(number width, number height)<br/>
+		nil Clear([Color color])<br/>
+		nil Display()<br/>
+		nil Draw(RenderTexture rt)<br/>
+		nil Draw(Shape shape)<br/>
+		nil Draw(Sprite sprite)<br/>
+		nil Draw(Text Text)<br/>
+		
+		BLEND_ENUM GetBlendMode()<br/>
+		Color GetColor()<br/>
+		number GetHeight()<br/>
+		Vector GetOrigin()<br/>
+		Vector GetPos()<br/>
+		number GetRot()<br/>
+		Vector GetScale()<br/>
+		number GetWidth()<br/>
+		nil Move(Vector offset)<br/>
+		nil Move(number offset_x, number offset_y)<br/>
+		nil SetBlendMode(BLEND_ENUM blendmode)<br/>
+		nil SetColor(Color col)<br/>
+		nil SetOrigin(Vector center)<br/>
+		nil SetPos(Vector pos)<br/>
+		nil SetRot(number angle)<br/>
+		nil SetScale(Vector scale)<br/>
+		nil SetSubRect(number x, number y, number width, number height)<br/>
+		number X([number x])<br/>
+		number Y([number y])<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="shape" href="Shape.htm">Shape</a></h3>
+	<p>
+		Represent a 2D polygonal shape.<br/><br/>
+		
+		<code>
+		Shape Shape()<br/>
+		<br/>
+		nil AddPoint(Vector point)<br/>
+		BLEND_ENUM GetBlendMode()<br/>
+		Color GetColor()<br/>
+		Vector GetOrigin()<br/>
+		number GetOutlineWidth()<br/>
+		Color GetPointColor(number idx)<br/>
+		number GetPointCount()<br/>
+		Color GetPointOutlineColor(number idx)<br/>
+		Vector GetPointPos(number idx)<br/>
+		Vector GetPos()<br/>
+		number GetRot()<br/>
+		Vector GetScale()<br/>
+		nil Move(Vector offset)<br/>
+		nil Move(number offset_x, number offset_y)<br/>
+		nil SetBlendMode(BLEND_ENUM blendmode)<br/>
+		nil SetColor(Color col)<br/>
+		nil SetOrigin(Vector center)<br/>
+		nil SetOutlineWidth(number width)<br/>
+		nil SetPointColor(number idx, Color col)<br/>
+		nil SetPointOutlineColor(number idx, Color col)<br/>
+		nil SetPointPos(number idx, Vector pos)<br/>
+		nil SetPos(Vector pos)<br/>
+		nil SetRot(number angle)<br/>
+		nil SetScale(Vector scale)<br/>
+		number X([number x])<br/>
+		number Y([number y])<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="sprite" href="Sprite.htm">Sprite</a></h3>
+	<p>
+		A 2D sprite. Link an image to it, transform, and draw it.<br/><br/>
+		
+		<code>
+		
+		Sprite Sprite()<br/>
+		<br/>
+		BLEND_ENUM GetBlendMode()<br/>
+		Color GetColor()<br/>
+		number GetHeight()<br/>
+		Image GetImage()<br/>
+		Vector GetOrigin()<br/>
+		Vector GetPos()<br/>
+		number GetRot()<br/>
+		Vector GetScale()<br/>
+		number GetWidth()<br/>
+		nil Move(Vector offset)<br/>
+		nil Move(number offset_x, number offset_y)<br/>
+		nil SetBlendMode(BLEND_ENUM blendmode)<br/>
+		nil SetColor(Color col)<br/>
+		nil SetImage(Image img)<br/>
+		nil SetOrigin(Vector center)<br/>
+		nil SetPos(Vector pos)<br/>
+		nil SetRot(number angle)<br/>
+		nil SetScale(Vector scale)<br/>
+		nil SetSubRect(number x, number y, number width, number height)<br/>
+		number X([number x])<br/>
+		number Y([number y])<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="text" href="Text.htm">Text</a></h3>
+	<p>
+		Represents graphical text. Transformable and drawable.<br/><br/>
+		
+		<code>
+		
+		Text Text()<br/>
+		<br/>
+		BLEND_ENUM GetBlendMode()<br/>
+		Color GetColor()<br/>
+		number GetHeight()<br/>
+		Vector GetOrigin()<br/>
+		Vector GetPos()<br/>
+		number GetRot()<br/>
+		Vector GetScale()<br/>
+		number GetSize()<br/>
+		string GetText()<br/>
+		number GetWidth()<br/>
+		nil Move(Vector offset)<br/>
+		nil Move(number offset_x, number offset_y)<br/>
+		nil SetBlendMode(BLEND_ENUM blendmode)<br/>
+		nil SetColor(Color col)<br/>
+		nil SetOrigin(Vector center)<br/>
+		nil SetPos(Vector pos)<br/>
+		nil SetRot(number angle)<br/>
+		nil SetScale(Vector scale)<br/>
+		nil SetSize(number charsize)<br/>
+		nil SetText(string text)<br/>
+		number X([number x])<br/>
+		number Y([number y])<br/>
+		
+		</code>
+	</p>
+	
+	<h3><a name="vector" href="Vector.htm">Vector</a></h3>
+	<p>
+		Represents a 2D {X,Y} vector.<br/><br/>
+		
+		<code>
+		
+		Vector Vector()<br/>
+		<br/>
+		Move(Vector offset)<br/>
+		Move(number offset_x, number offset_y)<br/>
+		Set(number x, number y)<br/>
+		number X([number x])<br/>
+		number Y([number y])<br/>
+		
+		</code>
+	</p>
+	
+	<footer>
+		<a href="#top">Back to Top</a>
+	</footer>
+	
+</body>
+</html>

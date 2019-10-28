@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>Pseudo Wire Reference - How To Play</title>
+	<link rel="stylesheet" type="text/css" href="doc.css"/>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+</head>
+
+<body>
+
+	<table border="0" width="800px">
+	<tr>
+	<td align="left" valign="bottom"><a name="top" href="index.htm"><h1>Pseudo Wire Reference</h1></a></td>
+	<td align="right"><a href="http://www.sfml-dev.org/"><img src="sfml-small.png" alt="SFML"/></a></td>
+	<td align="right"><a href="http://www.lua.org/"><img src="powered-by-lua.png" alt="Lua"/></a></td>
+	</tr>
+	</table>
+	
+	<h2>How To Play - The Basics</h2>
+	
+	<a href="#menubar">1. Menu Bar</a><br/>
+	<a href="#spawnlist">2. Spawn List</a><br/>
+	<a href="#contextmenu">3. Context Menu</a><br/>
+	<a href="#savewindow">4. Save Window</a><br/>
+	<a href="#loadwindow">5. Load Window</a><br/>
+	<a href="#editwindow">6. Edit Window</a><br/>
+	
+	<div>
+		<a name="menubar"><h3>1. Menu Bar</h3></a>
+		<img src="menubar.png"/>
+		<p>
+			The menu bar is located at the top of the screen.</br></br>
+			The menu bar has eight items that can be selected:</br>
+			<ul>
+				<li>New</li>
+				<li>Save</li>
+				<li>Load</li>
+				<li>Edit / Game Mode</li>
+				<li>Show Grid / Remove Grid</li>
+				<li>Enable / Disable Battery Saver</li>
+				<li>About</li>
+				<li>Exit</li>
+			</ul>
+		</p>
+		<p>
+			<b>New</b> clears the game of all components, leaving the user a clean slate to build a new creation.<br/><br/>
+			<b>Save</b> allows the user to save their workspace to a file.<br/><br/>
+			<b>Load</b> allows the user to open saved workspaces and continue working on them or interact with them.<br/><br/>
+			<b>Edit / Game Mode</b> is a toggleable item on the Menu bar. During Edit Mode, the user can build and edit their components. Edit Mode displays an icon beside the mouse to ensure the user knows they are in Edit Mode. During Game Mode, the user has full interaction with the components. All tools are disabled in Game Mode.<br/><br/>
+			<b>Show Grid / Remove Grid</b> is a toggleable item in the Menu Bar. When enabled, a "snap-to" grid will appear on the game workspace. Use the accompanying Up and Down buttons can grow or shrink the grid size. <br/><br/>
+			<b>Enable / Disable Battery Saver</b> is a toggleable item in the Menu Bar. When enabled, the game will give slack to the CPU, allowing a longer battery life on laptops. However, this will drop performance. <br/><br/>
+			<b>About</b> displays Pseudo Wire information, such as Authors and Version.<br/><br/>
+			<b>Exit</b> will quit the game. Any unsaved progress will be lost.<br/><br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="spawnlist"><h3>2. Spawn List</h3></a>
+		<img src="spawnlist.png"/>
+		<p>
+			The spawn list (or spawn menu) is a tree of all the different components you can build and use.<br/>
+			You can access this menu by Right-Clicking on an empty space in the game during Edit Mode.<br/>
+			When you first open the menu, you'll see all the different categories you can expand.<br/>
+			Categories are used to group like-components. Categories are items with the <img src="bullet_toggle_plus.png"/> or <img src="bullet_toggle_minus.png"/> icons beside them.<br/>
+			Use the scroll wheel or arrow keys to scroll up and down the list.<br/>
+			<br/>
+			For example, if you click on the <code>Math</code> category, you'll see math-related components, such as <code>Add</code>, <code>Subtact</code>, <code>Absolute</code>, <code>Round</code>, <code>Negate</code>, and so on.<br/>
+			You may click on a component to spawn it.
+		</p>
+	</div>
+	
+	<div>
+		<a name="contextmenu"><h3>3. Context Menu</h3></a>
+		<img src="contextmenu.png"/>
+		<p>
+			The context menu contains all component editing tools.<br/>
+			You can access this menu by Right-Clicking on the component you wish to edit during Edit Mode.<br/><br/>
+			When you first open the context menu, you have many different options:<br/>
+			<ul>
+				<li>Wire Input</li>
+				<li>Wire Output</li>
+				<li>Edit</li>
+				<li>Unwire Input</li>
+				<li>Unwire Output</li>
+				<li>Remove</li>
+			</ul>
+		</p>
+		<p>
+			<b>Wire Input</b> is used to connect (or "wire") an input of this component to an output of another component. Choosing this will open another menu with all the inputs of the component you wish to connect to. After selecting an input, right click on the other component you want to connect to, and click on an available output.<br/><br/>
+			<b>Wire Output</b> is much like the above. It is used to connect (or "wire") an output of this component to an input of another component. If you have played with <a href="intro.htm#whatis">Wiremod</a>, this will probably be your prefered method of wiring.<br/><br/>
+			<b>Edit</b> will bring up a dialog window that may give you options to edit how the component functions. However, not all components are customizable and choosing this will perform no action.<br/><br/>
+			<b>Unwire Input</b> is used to remove the connection on an input. Clicking this will bring up a list of inputs to choose from.<br/><br/>
+			<b>Unwire Output</b> is used to remove all connections on an output. Clicking this will bring up a list of outputs to choose from.<br/><br/>
+			<b>Remove</b> is used to delete a component from the game. Clicking this will first remove any connections, then delete the component.<br/><br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="savewindow"><h3>4. Save Window</h3></a>
+		<img src="savewindow.png" />
+		<p>
+			The saving window allows you to save your progress and <a href="#loadwindow">load</a> it another time.<br/>
+			Enter your filename into the textbox (the .pwm extension is not required) and hit the Accept button at the top right (green.) This will create a .pwm (Pseudo Wire Machine) save file which will be stored in your <code>saves</code> folder.<br/>
+			To cancel the saving window, hit the Cancel button at the top right (red.)<br/>
+			If "Save output values" is checked, the game will save the values of all component outputs and will be reloaded in game load. This feature is rarely used and not needed. This will also increase the save file's size.<br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="loadwindow"><h3>5. Load Window</h3></a>
+		<img src="loadwindow.png" />
+		<p>
+			The loading window allows you to load progress that was previously <a href="#savewindow">saved</a>.<br/>
+			Click on the file that you wish to load and click the Accept button at the top right (green.)<br/>
+			To cancel the loading window, hit the Cancel button at the top right (red.)<br/>
+			You may use the scroll wheel or arrow keys to scroll up and down.<br/>
+			The loading window explores the <code>saves</code> folder, where all save files should be located.<br/>
+		</p>
+	</div>
+	
+	<div>
+		<a name="editwindow"><h3>6. Edit Window</h3></a>
+		<img src="editwindow.png" />
+		<p>
+			The edit window allows you to modify the component and how it behaves. Not all components will have this feature.<br/>
+			To submit new settings, hit the Accept button (green.)<br/>
+			To cancel new settings, hit the Cancel button (red.)<br/>
+		</p>
+	</div>
+		
+	<footer>
+		<a href="intro.htm">&lt;&lt; Intro</a> <a href="#top">Back to Top</a>
+	</footer>
+</body>
+</html>
